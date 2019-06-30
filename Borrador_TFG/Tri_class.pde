@@ -14,6 +14,14 @@ class Triangulo {
   float contColTri3;
   //define la variable del contador de frames
   float contFrame;
+  //contador de tamano
+  float contTam;
+  //velocidad de crecimiento
+  float velocidadT;
+  //interruptor que determina el crecimiento
+  boolean crecer;
+  //contador que maneja el interruptor de crecimiento
+  float contCrecer;
 
   //define los valores necesarios para hacer una neva forma de la clase Triangulo
   Triangulo (float x1, float y1) {  
@@ -33,6 +41,9 @@ class Triangulo {
     contColTri = 0;
     contColTri2 = 0;
     contColTri3 = 0;
+    crecer = false;
+    velocidadT = 12;
+    contCrecer = 0;
   } 
   void update() {
     noStroke();
@@ -78,6 +89,28 @@ class Triangulo {
       }
     } else {
       contColTri3 = 0;
+      contTam ++;
+      //activa el contador de crecimiento
+      crecer = true;
+    }
+    
+    //controla el tamano final de la forma
+    //suma 5 a la posicion de cada punto
+    if (contCrecer > 4) {
+      crecer = false;
+    }
+    
+    //aumenta el tamano de la forma
+    if (crecer) {
+      if (contTam > velocidadT) {
+        //xPos1 = xPos1 + 1;
+        yPos1 = yPos1 - 1;
+        xPos2 = xPos2 - 1;
+        yPos2 = yPos2 + 1;
+        xPos3 = xPos3 + 1;
+        yPos3 = yPos3 + 1;
+        contCrecer++;
+      }
     }
 
     //muestra los valores de los contadore, para comprobar si funcionan correctamente
@@ -92,5 +125,12 @@ class Triangulo {
     text("Cont 2_60/ps " + contColTri2, 20, 440);
     text("Cont 3_60/ps " + contColTri3, 20, 460);
     text("Cont Frame " + contFrame, 20, 480);
+    fill(0, 0, 255);
+    text("X1 " + xPos1, 20, 520);
+    text("Y1 " + yPos1, 20, 540);
+    text("X2 " + xPos2, 20, 560);
+    text("Y2 " + yPos2, 20, 580);
+    text("X3 " + xPos3, 20, 600);
+    text("Y3 " + yPos3, 20, 620);
   }
 } 
