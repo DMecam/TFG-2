@@ -59,6 +59,11 @@ void draw() {
     triangle(tx1, ty1, tx2, ty2, tx3, ty3);
   }
 
+  if (dist(posX, posY, cir1.xPos, cir1.yPos) < cir1.tam/2 + 15) {
+    cir1.xPos = 300;
+    cir1.yPos = 300;
+  } 
+
   //linea para comprobar la posicion y tamano de los objetos
   stroke(255);
   line(0, 120, 800, 120);

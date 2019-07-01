@@ -90,7 +90,7 @@ class Circulo {
       contColCir3 = 0;
       contTam ++;
     } 
-    
+
     //aumenta el tamano de la forma
     if (tam <= 29) {
       if (contTam > velocidadT) {
