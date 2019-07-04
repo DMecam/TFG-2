@@ -46,6 +46,7 @@ class Triangulo {
     velocidadT = 12;
     contCrecer = 0;
     tamMax = false;
+    contFrame = 0;
   } 
   void update() {
     noStroke();

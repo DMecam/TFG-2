@@ -16,6 +16,7 @@ float tx3;
 float ty3;
 //variable de tiempo
 int m;
+boolean tamMaxTri1;
 //interruptor de colision de las formas
 boolean colisionCir1;
 boolean colisionCu1;
@@ -61,6 +62,7 @@ void setup() {
   resetCir1 = false;
   resetCu1 = false;
   resetTri1 = false;
+  tamMaxTri1 = false;
 }
 
 void draw() {
@@ -191,25 +193,90 @@ void draw() {
 
   /////////// Colision Triangulo 1 /////////
 
-  if (dist (tri1.xPos2, tri1.yPos2, tri1.xPos3, tri1.yPos3) < 29) {
-    if (dist(posX, posY, tri1.xPos1, tri1.yPos2) < 15 + 15) {
-      tri1.xPos1 += 20;
-      tri1.yPos1 += 20;
-      tri1.xPos2 = tri1.xPos1 - 10;
-      tri1.yPos2 = tri1.yPos1 + 20;
-      tri1.xPos3 = tri1.xPos1 + 10;
-      tri1.yPos3 = tri1.yPos2;
-    }
-  } else {
-    if (dist(posX, posY, tri1.xPos1, tri1.yPos2) < 20 + 15) {
-      tri1.xPos1 += 20;
-      tri1.yPos1 += 20;
-      tri1.xPos2 = tri1.xPos1 - 10;
-      tri1.yPos2 = tri1.yPos1 + 20;
-      tri1.xPos3 = tri1.xPos1 + 10;
-      tri1.yPos3 = tri1.yPos2;
+
+  if (colisionTri1 == false) {
+    //calcula la colision segun la distancia
+    if (dist (tri1.xPos2, tri1.yPos2, tri1.xPos3, tri1.yPos3) < 29) {
+      if (dist(posX, posY, tri1.xPos1, tri1.yPos2) < 15 + 15) {
+        //activa el interruptor de colision
+        colisionTri1 = true;
+        //traslada la forma fuera de la pantalla
+        tri1.xPos1 += width;
+        tri1.yPos1 += height;
+        tri1.xPos2 = tri1.xPos1 - 10;
+        tri1.yPos2 = tri1.yPos1 + 20;
+        tri1.xPos3 = tri1.xPos1 + 10;
+        tri1.yPos3 = tri1.yPos2;
+        //if (dist(posX, posY, tri1.xPos1, tri1.yPos2) < 20 + 15) {
+        //  tri1.yPos1 = tri1.yPos1 - 5;
+        //}
+      }
+    } else {
+      if (dist(posX, posY, tri1.xPos1, tri1.yPos2) < 20 + 15) {
+        //activa el interruptor de colision
+        colisionTri1 = true;
+        //traslada la forma fuera de la pantalla
+        tri1.xPos1 += width;
+        tri1.yPos1 += height;
+        tri1.xPos2 = tri1.xPos1 - 10;
+        tri1.yPos2 = tri1.yPos1 + 20;
+        tri1.xPos3 = tri1.xPos1 + 10;
+        tri1.yPos3 = tri1.yPos2;
+        tamMaxTri1 = true;
+      }
     }
   }
+
+  //si el interrupto de colision esta activo suma al contador
+  if (colisionTri1 == true) {
+    contColisionTri1 ++;
+  }
+
+  //si el calor del contador de colision es mayor que 599, activa el interruptor
+  //de reseteos de las formas
+  if (contColisionTri1 > 599) {
+    resetTri1 = true;
+  }
+
+  //si el interruptor de reseteo se activa se reestablecen los valores iniciales
+  if (resetTri1) {
+    if (tamMaxTri1) {
+      tri1.yPos1 += 10;
+      tamMaxTri1 = false;
+    }
+    tri1.xPos2 = tri1.xPos1 - 10;
+    tri1.yPos2 = tri1.yPos1 + 20;
+    tri1.xPos3 = tri1.xPos1 + 10;
+    tri1.yPos3 = tri1.yPos2;
+    tri1.colR = 245;
+    tri1.colG = 255;
+    tri1.colB = 0;
+    tri1.contColTri = 0;
+    tri1.contColTri2 = 0;
+    tri1.contColTri3 = 0;
+    tri1.crecer = false;
+    tri1.contCrecer = 0;
+    tri1.tamMax = false;
+    tri1.contFrame = 0;
+    //desactiva el interruptor de reseteo
+    resetTri1 = false;
+  }
+
+  //si el valor del contador de colision es mayor que 600, la forma vuelve a su
+  //posicion inicial
+  if (contColisionTri1 > 600) {
+    tri1.xPos1 -= width;
+    tri1.yPos1 -= height;
+    tri1.xPos2 = tri1.xPos1 - 10;
+    tri1.yPos2 = tri1.yPos1 + 20;
+    tri1.xPos3 = tri1.xPos1 + 10;
+    tri1.yPos3 = tri1.yPos2;
+    //desactiva el interruptor de colision
+    colisionTri1 = false;
+    contColisionTri1 = 0;
+  }
+
+  /////////// Fin de las colisiones ///////////
 
   //linea para comprobar la posicion y tamano de los objetos
   stroke(255);
