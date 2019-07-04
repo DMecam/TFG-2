@@ -22,6 +22,7 @@ class Triangulo {
   boolean crecer;
   //contador que maneja el interruptor de crecimiento
   float contCrecer;
+  boolean tamMax;
 
   //define los valores necesarios para hacer una neva forma de la clase Triangulo
   Triangulo (float x1, float y1) {  
@@ -44,6 +45,7 @@ class Triangulo {
     crecer = false;
     velocidadT = 12;
     contCrecer = 0;
+    tamMax = false;
   } 
   void update() {
     noStroke();
@@ -93,16 +95,18 @@ class Triangulo {
       //activa el contador de crecimiento
       crecer = true;
     }
-    
+
     //controla el tamano final de la forma
     //suma 5 a la posicion de cada punto
     if (contCrecer > 4) {
       crecer = false;
     }
-    
+
     //aumenta el tamano de la forma
     if (crecer) {
       if (contTam > velocidadT) {
+        //si se cambian las sumas por una multiplicacion (0.9 o 1.1) la forma se 
+        //deforma
         //xPos1 = xPos1 + 1;
         yPos1 = yPos1 - 1;
         xPos2 = xPos2 - 1;
@@ -110,6 +114,19 @@ class Triangulo {
         xPos3 = xPos3 + 1;
         yPos3 = yPos3 + 1;
         contCrecer++;
+      }
+      if (dist(xPos2, yPos2, xPos3, yPos3) == 30){
+        tamMax = true;
+      }
+    }
+
+    if (tamMax) {
+      if (dist(xPos2, yPos2, xPos3, yPos3) < 30) {
+        yPos1 -= 5;
+        xPos2 -= 5;
+        yPos2 += 5;
+        xPos3 += 5;
+        yPos3 += 5;
       }
     }
 
