@@ -18,11 +18,17 @@ float ty3;
 int m;
 //interruptor de colision de las formas
 boolean colisionCir1;
+boolean colisionCu1;
+boolean colisionTri1;
 //contador que controla el tiempo de la consecuencia de la colision
 float contColisionCir1;
+float contColisionCu1;
+float contColisionTri1;
 //interruptor que resetea el proceso de la forma una vez que vuelve a la ser 
 //visible en la pantalla
 boolean resetCir1;
+boolean resetCu1;
+boolean resetTri1;
 
 //Crea los objetos clase Cuadrado
 Cuadrado cu1 = new Cuadrado(110, 110);
@@ -45,10 +51,16 @@ void setup() {
   triangulo = false;
   //interruptor de colision de las formas
   colisionCir1 = false;
+  colisionCu1 = false;
+  colisionTri1 = false;
   //contador de colision
   contColisionCir1 = 0;
+  contColisionCu1 = 0;
+  contColisionTri1 = 0;
   //interruptor de reseteo de las formas
   resetCir1 = false;
+  resetCu1 = false;
+  resetTri1 = false;
 }
 
 void draw() {
@@ -84,6 +96,8 @@ void draw() {
     triangle(tx1, ty1, tx2, ty2, tx3, ty3);
   }
 
+  //////// Colision Circulo 1 //////////
+
   if (colisionCir1 == false) {
     //calcula la colision segun la distancia
     if (dist(posX, posY, cir1.xPos, cir1.yPos) < cir1.tam/2 + 15) {
@@ -99,10 +113,10 @@ void draw() {
   if (colisionCir1 == true) {
     contColisionCir1 ++;
   }
-  
+
   //si el valor del contador de colision es mayor que 599, activa el interruptor
   //de reseteos de las formas
-  if (contColisionCir1 > 599){
+  if (contColisionCir1 > 599) {
     resetCir1 = true;
   }
 
@@ -131,10 +145,51 @@ void draw() {
     contColisionCir1 = 0;
   }
 
-  if (dist(posX, posY, cu1.xPos, cu1.yPos) < cu1.tam/2 + 15) {
-    cu1.xPos += 20;
-    cu1.yPos += 20;
+  ////////// Colision Cuadrado 1 ////////////
+
+  if (colisionCu1 == false) {
+    //calcula la colision segun la distancia
+    if (dist(posX, posY, cu1.xPos, cu1.yPos) < cu1.tam/2 + 15) {
+      //activa el interruptor de colision
+      colisionCu1 = true;
+      //traslada la forma fuera de la pantalla
+      cu1.xPos += width;
+      cu1.yPos += height;
+    }
   }
+
+  //si el interruptor de colision esta activo suma al contador
+  if (colisionCu1 == true) {
+    contColisionCu1 ++;
+  }
+
+  //si el valor del contador de colision es mayor que 599, activa el interruptor
+  //de reseteos de las formas
+  if (contColisionCu1 > 599) {
+    resetCu1 = true;
+  }
+
+  //si el interrupto de reseteo se activa se reestablecen los valores iniciales
+  if (resetCu1) {
+    cu1.colCua = 245;
+    cu1.contColCua = 0;
+    cu1.tam = 20;
+    cu1.contTam = 0;
+    //desactiva el interruptor de reseteo
+    resetCu1 = false;
+  }
+
+  //si el valor del contador de colision es mayor que 600, la forma vuelve a su
+  //posicion inicial
+  if (contColisionCu1 > 600) {
+    cu1.xPos -= width;
+    cu1.yPos -= height;
+    //desactiva el interruptor de colision 
+    colisionCu1 = false;
+    contColisionCu1 = 0;
+  }
+
+  /////////// Colision Triangulo 1 /////////
 
   if (dist (tri1.xPos2, tri1.yPos2, tri1.xPos3, tri1.yPos3) < 29) {
     if (dist(posX, posY, tri1.xPos1, tri1.yPos2) < 15 + 15) {
