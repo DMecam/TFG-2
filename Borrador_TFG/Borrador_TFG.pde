@@ -14,7 +14,15 @@ float tx2;
 float ty2;
 float tx3;
 float ty3;
+//variable de tiempo
 int m;
+//interruptor de colision de las formas
+boolean colisionCir1;
+//contador que controla el tiempo de la consecuencia de la colision
+float contColisionCir1;
+//interruptor que resetea el proceso de la forma una vez que vuelve a la ser 
+//visible en la pantalla
+boolean resetCir1;
 
 //Crea los objetos clase Cuadrado
 Cuadrado cu1 = new Cuadrado(110, 110);
@@ -35,6 +43,12 @@ void setup() {
   cuadrado = true;
   circulo = false;
   triangulo = false;
+  //interruptor de colision de las formas
+  colisionCir1 = false;
+  //contador de colision
+  contColisionCir1 = 0;
+  //interruptor de reseteo de las formas
+  resetCir1 = false;
 }
 
 void draw() {
@@ -70,12 +84,53 @@ void draw() {
     triangle(tx1, ty1, tx2, ty2, tx3, ty3);
   }
 
-  //calcula la colision segun la distancia
-  if (dist(posX, posY, cir1.xPos, cir1.yPos) < cir1.tam/2 + 15) {
-    cir1.xPos += 20;
-    cir1.yPos += 20;
-  } 
+  if (colisionCir1 == false) {
+    //calcula la colision segun la distancia
+    if (dist(posX, posY, cir1.xPos, cir1.yPos) < cir1.tam/2 + 15) {
+      //activa el interruptor de colision
+      colisionCir1 = true;
+      //traslada la forma fuera de la pantalla
+      cir1.xPos += width;
+      cir1.yPos += height;
+    }
+  }
+
+  //si el interruptor de colision esta activo suma al contador
+  if (colisionCir1 == true) {
+    contColisionCir1 ++;
+  }
   
+  //si el valor del contador de colision es mayor que 599, activa el interruptor
+  //de reseteos de las formas
+  if (contColisionCir1 > 599){
+    resetCir1 = true;
+  }
+
+  //si el interruptor de reseteo se activa se reestablecen los valores iniciales
+  if (resetCir1) {
+    cir1.tam = 20;
+    cir1.contTam = 0;
+    cir1.colR = 0;
+    cir1.colG = 245;
+    cir1.colB = 255;
+    cir1.contColCir = 0;
+    cir1.contColCir2 = 0;
+    cir1.contColCir3 = 0;
+    cir1.contFrame = 0;
+    //desactiva el interruptor de reseteo
+    resetCir1 = false;
+  }
+
+  //si el valor del contador de colision es mayor que 600, la forma vuelve a su 
+  //posicion inicial
+  if (contColisionCir1 > 600) {
+    cir1.xPos -= width;
+    cir1.yPos -= height;
+    //desactiva el interruptor de colision
+    colisionCir1 = false;
+    contColisionCir1 = 0;
+  }
+
   if (dist(posX, posY, cu1.xPos, cu1.yPos) < cu1.tam/2 + 15) {
     cu1.xPos += 20;
     cu1.yPos += 20;
