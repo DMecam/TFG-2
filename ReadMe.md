@@ -89,3 +89,10 @@ Este documento no contiene ningun caracter que no se encuentre dentro del teclad
     - Cuando el valor es `> 24` el valor que se **resta** a la posicion **Y** de las formas es **aleatorio entre 0 y 5**. <br>
     - Si el valor es `= 1` se reestablecen los valores iniciales de las formas. <br>
   - El movimiento de la **forma principal** depende directamente de la interaccion directa del usuario. <br>
+
+***
+
+### Tareas pendientes
+- Agregarle a la clase **Cuadrado** el evento de movimiento.
+- Agregarle a la clase **Triangulo** el evento de movimiento.
+- Colocar cada forma en su posicion correspondiente.
