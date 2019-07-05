@@ -53,11 +53,22 @@ Este documento no contiene ningun caracter que no se encuentre dentro del teclad
   - La **forma principal** carece de este aumento de tamano. Directamente se muestra con el tamano final, **30 pixeles**. <br>
 
 **Colision** <br>
-- La colision entre las formas se registra a traves de la funcion `dist()`. <br>
-  - Se emplea la variable `tam` en las formas pertenecientes a la clase **Cuadrado** y **Circulo** para calcular la mitad sin que el evento de crecimiento cause problemas. <br>
-  - La clase **Triangulo** se calcula la mitad segun el tamano que tenga la forma en el momento de la colision. Para calcularlo se mide la distancia entre los dos vertices inferiores. <br>
-    - Si esta distancia indica que el **Triangulo** en cuestion no ha crecido, la distancia de colision es de **15 pixeles + la mitad de la forma principal**. <br>
-    - Si la distancia indica lo contrario la distancia de colision es de **20 pixeles + la mitad de la forma principal**. <br>
-  - La colision con la forma principal tambien se calcula a traves de la variable `dist()`. La mitad de la **forma principal** es **15 pixeles** y no varia (ya que esta forma no pasa por el evento anterior).
+  - La colision entre las formas se registra a traves de la funcion `dist()`. <br>
+    - Se emplea la variable `tam` en las formas pertenecientes a la clase **Cuadrado** y **Circulo** para calcular la mitad sin que el evento de crecimiento cause problemas. <br>
+    - La clase **Triangulo** se calcula la mitad segun el tamano que tenga la forma en el momento de la colision. Para calcularlo se mide la distancia entre los dos vertices inferiores. <br>
+      - Si esta distancia indica que el **Triangulo** en cuestion no ha crecido, la distancia de colision es de **15 pixeles + la mitad de la forma principal**. <br>
+      - Si la distancia indica lo contrario la distancia de colision es de **20 pixeles + la mitad de la forma principal**. <br>
+    - La colision con la forma principal tambien se calcula a traves de la variable `dist()`. La mitad de la **forma principal** es **15 pixeles** y no varia (ya que esta forma no pasa por el evento anterior).
 
 **Consecuencias de la colision**
+  - Tras registrarse una colision ocurre lo siguiente.
+    - Las formas pertenecientes a la clase **Triangulo**, **Cuadrado** y **Circulo** se trasladan fuera de la pantalla.
+    - Se inicia un contador que controla el tiempo que permanece en esta nueva situacion.
+  - La **forma prinipal** no registra ningun cambio.
+
+**Reseteo**
+  - Una vez el contador del evento anterior alcanza un valor determinado ocurre lo siguiente:
+    - Al alcanzar un valor superior a **599** se restauran todos los valores iniciales de las formas (tamano, color, contadores...).
+      - Si la forma que se resetea es de la clase **Triangulo** y ya ha pasado por el evento de aumento de tamano, se activa un interruptor que reestablece el valor inicial de la variable `yPos1` de forma manual.
+    - Si el valor es superior a **600** se reestablece la posicion inicial de la forma y vuelve a pasar por todos los eventos anteriores.
+  - La **forma principal** no se ve afectada por este evento.

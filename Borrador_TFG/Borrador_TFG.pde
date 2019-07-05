@@ -240,6 +240,8 @@ void draw() {
 
   //si el interruptor de reseteo se activa se reestablecen los valores iniciales
   if (resetTri1) {
+    //en caso de que la forma ya haya crecido se reestablece la variable yPos1 
+    //restandole 10 pixeles
     if (tamMaxTri1) {
       tri1.yPos1 += 10;
       tamMaxTri1 = false;
