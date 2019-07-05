@@ -30,6 +30,7 @@ float contColisionTri1;
 boolean resetCir1;
 boolean resetCu1;
 boolean resetTri1;
+//contador de movimiento
 float contCaminar;
 
 //Crea los objetos clase Cuadrado
@@ -64,6 +65,7 @@ void setup() {
   resetCu1 = false;
   resetTri1 = false;
   tamMaxTri1 = false;
+  //valor inicial del contador de movimiento
   contCaminar = 2;
 }
 
@@ -282,27 +284,31 @@ void draw() {
 
   /////////// Fin de las colisiones ///////////
   
-  if (contCaminar > 5) {
+  //altera los valores de la funcion caminar de las formas segun el contador de 
+  //movimiento
+  if (contCaminar > 4) {
     cir1.caminar();
   }
   
-  if (contCaminar > 10) {
+  if (contCaminar > 9) {
     cir1.opcion1 = random(5);
   }
   
-  if (contCaminar > 15) {
+  if (contCaminar > 14) {
     cir1.opcion2 = random(5);
   }
   
-  if (contCaminar > 20) {
+  if (contCaminar > 19) {
     cir1.opcion3 = random(5);
   }
   
-  if (contCaminar > 25) {
+  if (contCaminar > 24) {
     cir1.opcion4 = random(5);
   }
   
-  if (contCaminar == 0) {
+  //resetea la posicion y forma inicial de la forma en caso de que el contador de 
+  //movimiento baje su valor
+  if (contCaminar == 1) {
     resetCir1 = true;
     cir1.xPos = 160;
     cir1.yPos = 110;
@@ -322,6 +328,9 @@ void draw() {
   m = millis();
   fill(0);
   text("Tiempo " + m, 200, 220);
+  
+  //muestra el valor del contador de movimiento
+  text("Contador de movimiento " + contCaminar, 200, 240);
 }
 
 //Movimiento de la forma principal
@@ -366,10 +375,17 @@ void keyPressed() {
     triangulo = false;
   }
   
+  //control del contador de movimiento
+  //lo aumenta
+  //equivale al valor introducido por un sensor
   if (key == 'q' || key == 'Q') {
     contCaminar++;
   }
   
+  
+  //control del contador de movimiento
+  //lo aumenta
+  //equivale al valor introducido por un sensor
   if (key == 'w' || key == 'W') {
     contCaminar--;
   }
