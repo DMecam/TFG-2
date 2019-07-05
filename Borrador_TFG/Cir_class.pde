@@ -18,6 +18,10 @@ class Circulo {
   float tam;
   float contTam;
   float velocidadT;
+  float opcion1;
+  float opcion2;
+  float opcion3;
+  float opcion4;
 
   //define los valores iniciales de la clase circulo
   //indica los datos necesarios para crear un nuevo objeto de esta clase
@@ -40,6 +44,10 @@ class Circulo {
     //define el contador de tamano y la velocidad de cambio
     contTam = 0;
     velocidadT = 2;
+    opcion1 = 1;
+    opcion2 = 1;
+    opcion3 = 1;
+    opcion4 = 1;
   } 
 
   //define el movimiento o el cambio de la clase circulo
@@ -114,4 +122,21 @@ class Circulo {
     fill(0, 0, 255);
     text("Tam Cir " + tam, 20, 500);
   }
-} 
+
+  void caminar() {
+    int opcion = int(random(4));
+
+    if (opcion == 0) {
+      xPos = xPos + opcion1;
+    } else if (opcion == 1) {
+      xPos = xPos - opcion2;
+    } else if (opcion == 2) {
+      yPos = yPos + opcion3;
+    } else {
+      yPos = yPos - opcion4;
+    }
+
+    xPos = constrain(xPos, tam/2, width - tam/2);
+    yPos = constrain(yPos, tam/2, height - tam/2);
+  }
+}

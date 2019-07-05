@@ -30,6 +30,7 @@ float contColisionTri1;
 boolean resetCir1;
 boolean resetCu1;
 boolean resetTri1;
+float contCaminar;
 
 //Crea los objetos clase Cuadrado
 Cuadrado cu1 = new Cuadrado(110, 110);
@@ -63,6 +64,7 @@ void setup() {
   resetCu1 = false;
   resetTri1 = false;
   tamMaxTri1 = false;
+  contCaminar = 2;
 }
 
 void draw() {
@@ -279,6 +281,32 @@ void draw() {
   }
 
   /////////// Fin de las colisiones ///////////
+  
+  if (contCaminar > 5) {
+    cir1.caminar();
+  }
+  
+  if (contCaminar > 10) {
+    cir1.opcion1 = random(5);
+  }
+  
+  if (contCaminar > 15) {
+    cir1.opcion2 = random(5);
+  }
+  
+  if (contCaminar > 20) {
+    cir1.opcion3 = random(5);
+  }
+  
+  if (contCaminar > 25) {
+    cir1.opcion4 = random(5);
+  }
+  
+  if (contCaminar == 0) {
+    resetCir1 = true;
+    cir1.xPos = 160;
+    cir1.yPos = 110;
+  }
 
   //linea para comprobar la posicion y tamano de los objetos
   stroke(255);
@@ -336,5 +364,13 @@ void keyPressed() {
     cuadrado = true;
     circulo = false;
     triangulo = false;
+  }
+  
+  if (key == 'q' || key == 'Q') {
+    contCaminar++;
+  }
+  
+  if (key == 'w' || key == 'W') {
+    contCaminar--;
   }
 }
