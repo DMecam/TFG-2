@@ -93,6 +93,5 @@ Este documento no contiene ningun caracter que no se encuentre dentro del teclad
 ***
 
 ### Tareas pendientes
-- Agregarle a la clase **Cuadrado** el evento de movimiento.
 - Agregarle a la clase **Triangulo** el evento de movimiento.
 - Colocar cada forma en su posicion correspondiente.

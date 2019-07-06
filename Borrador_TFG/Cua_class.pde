@@ -11,6 +11,10 @@ class Cuadrado {
   //variables de la velocidad del cambio de tamano y color
   float velocidadC;
   float velocidadT;
+  float opcion1;
+  float opcion2;
+  float opcion3;
+  float opcion4;
 
 
   //define los valores iniciales de la clase cuadrado
@@ -27,6 +31,10 @@ class Cuadrado {
     //velocidad de cambio
     velocidadC = 2;
     velocidadT = 6;
+    opcion1 = 1;
+    opcion2 = 1;
+    opcion3 = 1;
+    opcion4 = 1;
   } 
 
   //define el movimiento o el cambio de la clase Cuadrado
@@ -66,5 +74,22 @@ class Cuadrado {
     fill(0);
     text("Color " + colCua, 20, 660);
     text("Tam " + tam, 20, 680);
+  }
+  
+    void caminar() {
+    int opcion = int(random(4));
+
+    if (opcion == 0) {
+      xPos = xPos + opcion1;
+    } else if (opcion == 1) {
+      xPos = xPos - opcion2;
+    } else if (opcion == 2) {
+      yPos = yPos + opcion3;
+    } else {
+      yPos = yPos - opcion4;
+    }
+
+    xPos = constrain(xPos, tam/2, width - tam/2);
+    yPos = constrain(yPos, tam/2, height - tam/2);
   }
 } 

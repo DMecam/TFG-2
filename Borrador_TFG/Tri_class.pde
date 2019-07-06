@@ -23,6 +23,10 @@ class Triangulo {
   //contador que maneja el interruptor de crecimiento
   float contCrecer;
   boolean tamMax;
+  float opcion1;
+  float opcion2;
+  float opcion3;
+  float opcion4;
 
   //define los valores necesarios para hacer una neva forma de la clase Triangulo
   Triangulo (float x1, float y1) {  
@@ -33,7 +37,6 @@ class Triangulo {
     yPos2 = y1 + 20;
     xPos3 = x1 + 10;
     yPos3 = yPos2;
-
     //define el valor inicial de las variables de color
     colR = 245;
     colG = 255;
@@ -47,6 +50,10 @@ class Triangulo {
     contCrecer = 0;
     tamMax = false;
     contFrame = 0;
+    opcion1 = 1;
+    opcion2 = 1;
+    opcion3 = 1;
+    opcion4 = 1;
   } 
   void update() {
     noStroke();
@@ -116,7 +123,7 @@ class Triangulo {
         yPos3 = yPos3 + 1;
         contCrecer++;
       }
-      if (dist(xPos2, yPos2, xPos3, yPos3) == 30){
+      if (dist(xPos2, yPos2, xPos3, yPos3) == 30) {
         tamMax = true;
       }
     }
@@ -150,5 +157,26 @@ class Triangulo {
     text("Y2 " + yPos2, 20, 580);
     text("X3 " + xPos3, 20, 600);
     text("Y3 " + yPos3, 20, 620);
+  }
+
+  void caminar() {
+    int opcion = int(random(4));
+
+    if (opcion == 0) {
+      xPos1 = xPos1 + opcion1;
+      xPos2 = xPos1 - 10;
+      yPos2 = yPos1 + 20;
+      xPos3 = xPos1 + 10;
+      yPos3 = yPos2;
+    } else if (opcion == 1) {
+      xPos1 = xPos1 - opcion2;
+    } else if (opcion == 2) {
+      yPos1 = yPos1 + opcion3;
+    } else {
+      yPos1 = yPos1 - opcion4;
+    }
+
+    xPos1 = constrain(xPos1, 15, width - 15);
+    yPos1 = constrain(yPos1, 15, height - 15);
   }
 } 

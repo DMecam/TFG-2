@@ -110,8 +110,8 @@ void draw() {
       //activa el interruptor de colision
       colisionCir1 = true;
       //traslada la forma fuera de la pantalla
-      cir1.xPos += width;
-      cir1.yPos += height;
+      cir1.xPos += width * 2;
+      cir1.yPos += height * 2;
     }
   }
 
@@ -144,8 +144,10 @@ void draw() {
   //si el valor del contador de colision es mayor que 600, la forma vuelve a su 
   //posicion inicial
   if (contColisionCir1 > 600) {
-    cir1.xPos -= width;
-    cir1.yPos -= height;
+    //cir1.xPos -= width * 2;
+    //cir1.yPos -= height * 2;
+    cir1.xPos = 160;
+    cir1.yPos = 100;
     //desactiva el interruptor de colision
     colisionCir1 = false;
     contColisionCir1 = 0;
@@ -159,8 +161,8 @@ void draw() {
       //activa el interruptor de colision
       colisionCu1 = true;
       //traslada la forma fuera de la pantalla
-      cu1.xPos += width;
-      cu1.yPos += height;
+      cu1.xPos += width * 2;
+      cu1.yPos += height * 2;
     }
   }
 
@@ -188,8 +190,10 @@ void draw() {
   //si el valor del contador de colision es mayor que 600, la forma vuelve a su
   //posicion inicial
   if (contColisionCu1 > 600) {
-    cu1.xPos -= width;
-    cu1.yPos -= height;
+    //cu1.xPos -= width;
+    //cu1.yPos -= height;
+    cu1.xPos = 110;
+    cu1.yPos = 110;
     //desactiva el interruptor de colision 
     colisionCu1 = false;
     contColisionCu1 = 0;
@@ -205,8 +209,8 @@ void draw() {
         //activa el interruptor de colision
         colisionTri1 = true;
         //traslada la forma fuera de la pantalla
-        tri1.xPos1 += width;
-        tri1.yPos1 += height;
+        tri1.xPos1 += width * 2;
+        tri1.yPos1 += height * 2;
         tri1.xPos2 = tri1.xPos1 - 10;
         tri1.yPos2 = tri1.yPos1 + 20;
         tri1.xPos3 = tri1.xPos1 + 10;
@@ -220,8 +224,8 @@ void draw() {
         //activa el interruptor de colision
         colisionTri1 = true;
         //traslada la forma fuera de la pantalla
-        tri1.xPos1 += width;
-        tri1.yPos1 += height;
+        tri1.xPos1 += width * 2;
+        tri1.yPos1 += height * 2;
         tri1.xPos2 = tri1.xPos1 - 10;
         tri1.yPos2 = tri1.yPos1 + 20;
         tri1.xPos3 = tri1.xPos1 + 10;
@@ -271,8 +275,8 @@ void draw() {
   //si el valor del contador de colision es mayor que 600, la forma vuelve a su
   //posicion inicial
   if (contColisionTri1 > 600) {
-    tri1.xPos1 -= width;
-    tri1.yPos1 -= height;
+    tri1.xPos1 = 200;
+    tri1.yPos1 = 100;
     tri1.xPos2 = tri1.xPos1 - 10;
     tri1.yPos2 = tri1.yPos1 + 20;
     tri1.xPos3 = tri1.xPos1 + 10;
@@ -288,22 +292,32 @@ void draw() {
   //movimiento
   if (contCaminar > 4) {
     cir1.caminar();
+    cu1.caminar();
+    tri1.caminar();
   }
   
   if (contCaminar > 9) {
     cir1.opcion1 = random(5);
+    cu1.opcion4 = random(5);
+    tri1.opcion3 = random(5);
   }
   
   if (contCaminar > 14) {
     cir1.opcion2 = random(5);
+    cu1.opcion1 = random(5);
+    tri1.opcion4 = random(5);
   }
   
   if (contCaminar > 19) {
     cir1.opcion3 = random(5);
+    cu1.opcion2 = random(5);
+    tri1.opcion1 = random(5);
   }
   
   if (contCaminar > 24) {
     cir1.opcion4 = random(5);
+    cu1.opcion3 = random(5);
+    tri1.opcion2 = random(5);
   }
   
   //resetea la posicion y forma inicial de la forma en caso de que el contador de 
