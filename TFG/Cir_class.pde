@@ -106,21 +106,6 @@ class Circulo {
         contTam = 0;
       }
     }
-
-    //muestra los valores de los contadores, para comprobar si funcionan correctamente
-    textSize(15);
-    textAlign(LEFT);
-    fill(0, 255, 0);
-    text("R " + colR, 20, 220);
-    text("G " + colG, 20, 240);
-    text("B " + colB, 20, 260);
-    fill(255, 0, 0);
-    text("Cont 1_60/ps " + contColCir, 20, 280);
-    text("Cont 2_60/ps " + contColCir2, 20, 300);
-    text("Cont 3_60/ps " + contColCir3, 20, 320);
-    text("Cont Frame " + contFrame, 20, 340);
-    fill(0, 0, 255);
-    text("Tam Cir " + tam, 20, 500);
   }
 
   void caminar() {

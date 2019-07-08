@@ -67,16 +67,9 @@ class Cuadrado {
         contTam = 0;
       }
     }
-
-    //muestra los valores de las variables para comprobar si funcionan correctamente
-    textSize(15);
-    textAlign(LEFT);
-    fill(0);
-    text("Color " + colCua, 20, 660);
-    text("Tam " + tam, 20, 680);
   }
-  
-    void caminar() {
+
+  void caminar() {
     int opcion = int(random(4));
 
     if (opcion == 0) {

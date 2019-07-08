@@ -141,26 +141,6 @@ class Triangulo {
         yPos3 += 5;
       }
     }
-
-    //muestra los valores de los contadore, para comprobar si funcionan correctamente
-    textSize(15);
-    textAlign(LEFT);
-    fill(0, 255, 0);
-    text("R " + colR, 20, 360);
-    text("G " + colG, 20, 380);
-    text("B " + colB, 20, 400);
-    fill(255, 0, 0);
-    text("Cont 1_60/ps " + contColTri, 20, 420);
-    text("Cont 2_60/ps " + contColTri2, 20, 440);
-    text("Cont 3_60/ps " + contColTri3, 20, 460);
-    text("Cont Frame " + contFrame, 20, 480);
-    fill(0, 0, 255);
-    text("X1 " + xPos1, 20, 520);
-    text("Y1 " + yPos1, 20, 540);
-    text("X2 " + xPos2, 20, 560);
-    text("Y2 " + yPos2, 20, 580);
-    text("X3 " + xPos3, 20, 600);
-    text("Y3 " + yPos3, 20, 620);
   }
 
   void caminar() {
