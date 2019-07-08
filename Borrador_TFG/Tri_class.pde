@@ -27,6 +27,8 @@ class Triangulo {
   float opcion2;
   float opcion3;
   float opcion4;
+  float xIn;
+  float yIn;
 
   //define los valores necesarios para hacer una neva forma de la clase Triangulo
   Triangulo (float x1, float y1) {  
@@ -54,6 +56,8 @@ class Triangulo {
     opcion2 = 1;
     opcion3 = 1;
     opcion4 = 1;
+    xIn = x1;
+    yIn = y1;
   } 
   void update() {
     noStroke();
@@ -164,16 +168,30 @@ class Triangulo {
 
     if (opcion == 0) {
       xPos1 = xPos1 + opcion1;
+      //yPos1 = yIn;
       xPos2 = xPos1 - 10;
       yPos2 = yPos1 + 20;
       xPos3 = xPos1 + 10;
       yPos3 = yPos2;
     } else if (opcion == 1) {
       xPos1 = xPos1 - opcion2;
+      //yPos1 = yIn;
+      xPos2 = xPos1 - 10;
+      yPos2 = yPos1 + 20;
+      xPos3 = xPos1 + 10;
+      yPos3 = yPos2;
     } else if (opcion == 2) {
       yPos1 = yPos1 + opcion3;
+      xPos2 = xPos1 - 10;
+      yPos2 = yPos1 + 20;
+      xPos3 = xPos1 + 10;
+      yPos3 = yPos2;
     } else {
       yPos1 = yPos1 - opcion4;
+      xPos2 = xPos1 - 10;
+      yPos2 = yPos1 + 20;
+      xPos3 = xPos1 + 10;
+      yPos3 = yPos2;
     }
 
     xPos1 = constrain(xPos1, 15, width - 15);

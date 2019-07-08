@@ -326,6 +326,12 @@ void draw() {
     resetCir1 = true;
     cir1.xPos = 160;
     cir1.yPos = 110;
+    resetCu1 = true;
+    cu1.xPos = 110;
+    cu1.yPos = 110;
+    resetTri1 = true;
+    tri1.xPos1 = 200;
+    tri1.yPos1 = 100;
   }
 
   //linea para comprobar la posicion y tamano de los objetos
