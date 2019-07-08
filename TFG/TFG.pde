@@ -25,7 +25,7 @@ boolean colisionTri1;
 float contColisionCir1;
 float contColisionCu1;
 float contColisionTri1;
-//interruptor que resetea el proceso de la forma una vez que vuelve a la ser 
+//interruptor que resetea el proceso de la forma una vez que vuelve a la ser
 //visible en la pantalla
 boolean resetCir1;
 boolean resetCu1;
@@ -148,7 +148,7 @@ Cuadrado cu107 = new Cuadrado(-240, -360);
 Cuadrado cu108 = new Cuadrado(-210, -360);
 Cuadrado cu109 = new Cuadrado(-180, -360);
 Cuadrado cu110 = new Cuadrado(-90, -330);
-Cuadrado cu111 = new Cuadrado(-360, -330); 
+Cuadrado cu111 = new Cuadrado(-360, -330);
 Cuadrado cu112 = new Cuadrado(-180, -330);
 Cuadrado cu113 = new Cuadrado(-120, -330);
 Cuadrado cu114 = new Cuadrado(-90, -330);
@@ -356,7 +356,94 @@ Cuadrado cu312 = new Cuadrado(-180, 360);
 Cuadrado cu313 = new Cuadrado(-120, 360);
 Cuadrado cuerr2 = new Cuadrado(-180, 270);
 
-Circulo cir1 = new Circulo(400, 0);
+//Crea los objetos de clase circulos
+//Linea Y 0
+Circulo cir1 = new Circulo(-240, 0);
+Circulo cir2 = new Circulo(-120, 0);
+Circulo cir3 = new Circulo(-60, 0);
+//Linea X 0
+Circulo cir4 = new Circulo(0, -270);
+Circulo cir5 = new Circulo(0, 150);
+//Cuadrante 1
+Circulo cir6 = new Circulo(-60, -360);
+Circulo cir7 = new Circulo(-30, -360);
+Circulo cir8 = new Circulo(-330, -330);
+Circulo cir9 = new Circulo(-300, -330);
+Circulo cir10 = new Circulo(-210, -330);
+Circulo cir11 = new Circulo(-60, -330);
+Circulo cir12 = new Circulo(-330, -300);
+Circulo cir13 = new Circulo(-210, -300);
+Circulo cir14 = new Circulo(-150, -300);
+Circulo cir15 = new Circulo(-120, -300);
+Circulo cir16 = new Circulo(-330, -270);
+Circulo cir17 = new Circulo(-150, -240);
+Circulo cir18 = new Circulo(-240, -210);
+Circulo cir19 = new Circulo(-150, -210);
+Circulo cir20 = new Circulo(-90, -210);
+Circulo cir21 = new Circulo(-150, -180);
+Circulo cir22 = new Circulo(-90, -180);
+Circulo cir23 = new Circulo(-30, -180);
+Circulo cir24 = new Circulo(-300, -150);
+Circulo cir25 = new Circulo(-240, -150);
+Circulo cir26 = new Circulo(-180, -150);
+Circulo cir27 = new Circulo(-150, -150);
+Circulo cir28 = new Circulo(-30, -150);
+Circulo cir29 = new Circulo(-360, -90);
+Circulo cir30 = new Circulo(-330, -90);
+Circulo cir31 = new Circulo(-180, -90);
+Circulo cir32 = new Circulo(-150, -90);
+Circulo cir33 = new Circulo(-60, -90);
+Circulo cir34 = new Circulo(-30, -90);
+Circulo cir35 = new Circulo(-360, -60);
+Circulo cir36 = new Circulo(-270, -60);
+Circulo cir37 = new Circulo(-150, -60);
+Circulo cir38 = new Circulo(-60, -60);
+Circulo cir39 = new Circulo(-330, -30);
+Circulo cir40 = new Circulo(-240, -30);
+Circulo cir41 = new Circulo(-150, -30);
+//Cuadrante 2
+Circulo cir42 = new Circulo(90, -360);
+Circulo cir43 = new Circulo(90, -330);
+Circulo cir44 = new Circulo(120, -330);
+Circulo cir45 = new Circulo(210, -330);
+Circulo cir46 = new Circulo(240, -330);
+Circulo cir47 = new Circulo(30, -300);
+Circulo cir48 = new Circulo(60, -300);
+Circulo cir49 = new Circulo(150, -300);
+Circulo cir50 = new Circulo(60, -270);
+Circulo cir51 = new Circulo(150, -270);
+Circulo cir52 = new Circulo(330, -270);
+Circulo cir53 = new Circulo(150, -240);
+Circulo cir54 = new Circulo(330, -240);
+Circulo cir55 = new Circulo(210, -210);
+Circulo cir56 = new Circulo(330, -210);
+Circulo cir57 = new Circulo(30, -180);
+Circulo cir58 = new Circulo(150, -180);
+Circulo cir59 = new Circulo(30, -150);
+Circulo cir60 = new Circulo(60, -150);
+Circulo cir61 = new Circulo(150, -150);
+Circulo cir62 = new Circulo(210, -150);
+Circulo cir63 = new Circulo(330, -150);
+Circulo cir64 = new Circulo(360, -150);
+Circulo cir65 = new Circulo(180, -120);
+Circulo cir66 = new Circulo(300, -120);
+Circulo cir67 = new Circulo(360, -120);
+Circulo cir68 = new Circulo(30, -90);
+Circulo cir69 = new Circulo(180, -90);
+Circulo cir70 = new Circulo(270, -90);
+Circulo cir71 = new Circulo(300, -90);
+Circulo cir72 = new Circulo(120, -60);
+Circulo cir73 = new Circulo(210, -60);
+Circulo cir74 = new Circulo(270, -60);
+Circulo cir75 = new Circulo(360, -60);
+Circulo cir76 = new Circulo(60, -30);
+Circulo cir77 = new Circulo(90, -30);
+Circulo cir78 = new Circulo(180, -30);
+Circulo cir79 = new Circulo(210, -30);
+Circulo cir80 = new Circulo(270, -30);
+Circulo cir81 = new Circulo(330, -30);
+Circulo cir82 = new Circulo(360, -30);
+
 Triangulo tri1 = new Triangulo(430, -10);
 
 void setup() {
@@ -393,7 +480,7 @@ void setup() {
 void draw() {
   translate(displayWidth/2, displayHeight/2);
   //fondo blanco
-  background(150);
+  background(255);
   //Llama a los objetos clase cuadrado
   //Linea Y 0
   cu1.update();
@@ -717,7 +804,94 @@ void draw() {
   cu313.update();
   cuerr2.update();
 
+  //Llama a los objetos clase cuadrado
+  //Linea Y 0
   cir1.update();
+  cir2.update();
+  cir3.update();
+  //Linea X 0
+  cir4.update();
+  cir5.update();
+  //Cuadrante 1
+  cir6.update();
+  cir7.update();
+  cir8.update();
+  cir9.update();
+  cir10.update();
+  cir11.update();
+  cir12.update();
+  cir13.update();
+  cir14.update();
+  cir15.update();
+  cir16.update();
+  cir17.update();
+  cir18.update();
+  cir19.update();
+  cir20.update();
+  cir21.update();
+  cir22.update();
+  cir23.update();
+  cir24.update();
+  cir25.update();
+  cir26.update();
+  cir27.update();
+  cir28.update();
+  cir29.update();
+  cir30.update();
+  cir31.update();
+  cir32.update();
+  cir33.update();
+  cir34.update();
+  cir35.update();
+  cir36.update();
+  cir37.update();
+  cir38.update();
+  cir39.update();
+  cir40.update();
+  cir41.update();
+  //Cuadrante 2
+  cir42.update();
+  cir43.update();
+  cir44.update();
+  cir45.update();
+  cir46.update();
+  cir47.update();
+  cir48.update();
+  cir49.update();
+  cir50.update();
+  cir51.update();
+  cir52.update();
+  cir53.update();
+  cir54.update();
+  cir55.update();
+  cir56.update();
+  cir57.update();
+  cir58.update();
+  cir59.update();
+  cir60.update();
+  cir61.update();
+  cir62.update();
+  cir63.update();
+  cir64.update();
+  cir65.update();
+  cir66.update();
+  cir67.update();
+  cir68.update();
+  cir69.update();
+  cir70.update();
+  cir71.update();
+  cir72.update();
+  cir73.update();
+  cir74.update();
+  cir75.update();
+  cir76.update();
+  cir77.update();
+  cir78.update();
+  cir79.update();
+  cir80.update();
+  cir81.update();
+  cir82.update();
+
   tri1.update();
 
   //forma principal
@@ -784,13 +958,13 @@ void draw() {
     resetCir1 = false;
   }
 
-  //si el valor del contador de colision es mayor que 600, la forma vuelve a su 
+  //si el valor del contador de colision es mayor que 600, la forma vuelve a su
   //posicion inicial
   if (contColisionCir1 > 600) {
     //cir1.xPos -= width * 2;
     //cir1.yPos -= height * 2;
-    cir1.xPos = 160;
-    cir1.yPos = 100;
+    cir1.xPos = -240;
+    cir1.yPos = 0;
     //desactiva el interruptor de colision
     colisionCir1 = false;
     contColisionCir1 = 0;
@@ -835,9 +1009,9 @@ void draw() {
   if (contColisionCu1 > 600) {
     //cu1.xPos -= width;
     //cu1.yPos -= height;
-    cu1.xPos = 110;
-    cu1.yPos = 110;
-    //desactiva el interruptor de colision 
+    cu1.xPos = 30;
+    cu1.yPos = 0;
+    //desactiva el interruptor de colision
     colisionCu1 = false;
     contColisionCu1 = 0;
   }
@@ -891,7 +1065,7 @@ void draw() {
 
   //si el interruptor de reseteo se activa se reestablecen los valores iniciales
   if (resetTri1) {
-    //en caso de que la forma ya haya crecido se reestablece la variable yPos1 
+    //en caso de que la forma ya haya crecido se reestablece la variable yPos1
     //restandole 10 pixeles
     if (tamMaxTri1) {
       tri1.yPos1 += 10;
@@ -931,7 +1105,7 @@ void draw() {
 
   /////////// Fin de las colisiones ///////////
 
-  //altera los valores de la funcion caminar de las formas segun el contador de 
+  //altera los valores de la funcion caminar de las formas segun el contador de
   //movimiento
   if (contCaminar > 4) {
     cir1.caminar();
@@ -963,7 +1137,7 @@ void draw() {
     tri1.opcion2 = random(5);
   }
 
-  //resetea la posicion y forma inicial de la forma en caso de que el contador de 
+  //resetea la posicion y forma inicial de la forma en caso de que el contador de
   //movimiento baje su valor
   if (contCaminar == 1) {
     resetCir1 = true;
