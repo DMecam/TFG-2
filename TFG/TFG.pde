@@ -1900,6 +1900,348 @@ void draw() {
     contColisionCir1 = 0;
   }
 
+  //////// Colision Circulo 2 //////////
+
+  if (colisionCir2 == false) {
+    if (dist(posX, posY, cir2.xPos, cir2.yPos) < cir2.tam/2 + 15) {
+      colisionCir2 = true;
+      cir2.xPos += width * 2;
+      cir2.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir2 == true) {
+    contColisionCir2 ++;
+  }
+
+  if (contColisionCir2 > 599) {
+    resetCir2 = true;
+  }
+
+  if (resetCir2) {
+    cir2.tam = 20;
+    cir2.contTam = 0;
+    cir2.colR = 0;
+    cir2.colG = 245;
+    cir2.colB = 255;
+    cir2.contColCir = 0;
+    cir2.contColCir2 = 0;
+    cir2.contColCir3 = 0;
+    cir2.contFrame = 0;
+    resetCir2= false;
+  }
+
+  if (contColisionCir2 > 600) {
+    cir2.xPos = -120;
+    cir2.yPos = 0;
+    colisionCir2 = false;
+    contColisionCir2 = 0;
+  }
+
+  //////// Colision Circulo 3 //////////
+
+  if (colisionCir3 == false) {
+    if (dist(posX, posY, cir3.xPos, cir3.yPos) < cir3.tam/2 + 15) {
+      colisionCir3 = true;
+      cir3.xPos += width * 2;
+      cir3.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir3 == true) {
+    contColisionCir3 ++;
+  }
+
+  if (contColisionCir3 > 599) {
+    resetCir3 = true;
+  }
+
+  if (resetCir3) {
+    cir3.tam = 20;
+    cir3.contTam = 0;
+    cir3.colR = 0;
+    cir3.colG = 245;
+    cir3.colB = 255;
+    cir3.contColCir = 0;
+    cir3.contColCir2 = 0;
+    cir3.contColCir3 = 0;
+    cir3.contFrame = 0;
+    resetCir3 = false;
+  }
+
+  if (contColisionCir3 > 600) {
+    cir3.xPos = -60;
+    cir3.yPos = 0;
+    colisionCir3 = false;
+    contColisionCir3 = 0;
+  }
+
+  //////// Colision Circulo 4 //////////
+
+  if (colisionCir4 == false) {
+    if (dist(posX, posY, cir4.xPos, cir4.yPos) < cir4.tam/2 + 15) {
+      colisionCir4 = true;
+      cir4.xPos += width * 2;
+      cir4.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir4 == true) {
+    contColisionCir4 ++;
+  }
+
+  if (contColisionCir4 > 599) {
+    resetCir4 = true;
+  }
+
+  if (resetCir4) {
+    cir4.tam = 20;
+    cir4.contTam = 0;
+    cir4.colR = 0;
+    cir4.colG = 245;
+    cir4.colB = 255;
+    cir4.contColCir = 0;
+    cir4.contColCir2 = 0;
+    cir4.contColCir3 = 0;
+    cir4.contFrame = 0;
+    resetCir4 = false;
+  }
+
+  if (contColisionCir4 > 600) {
+    cir4.xPos = 0;
+    cir4.yPos = -270;
+    colisionCir4 = false;
+    contColisionCir4 = 0;
+  }
+
+  //////// Colision Circulo 5 //////////
+
+  if (colisionCir5 == false) {
+    if (dist(posX, posY, cir5.xPos, cir5.yPos) < cir5.tam/2 + 15) {
+      colisionCir5 = true;
+      cir5.xPos += width * 2;
+      cir5.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir5 == true) {
+    contColisionCir5 ++;
+  }
+
+  if (contColisionCir5 > 599) {
+    resetCir5 = true;
+  }
+
+  if (resetCir5) {
+    cir5.tam = 20;
+    cir5.contTam = 0;
+    cir5.colR = 0;
+    cir5.colG = 245;
+    cir5.colB = 255;
+    cir5.contColCir = 0;
+    cir5.contColCir2 = 0;
+    cir5.contColCir3 = 0;
+    cir5.contFrame = 0;
+    resetCir5 = false;
+  }
+
+  if (contColisionCir5 > 600) {
+    cir5.xPos = 0;
+    cir5.yPos = 150;
+    colisionCir5 = false;
+    contColisionCir5 = 0;
+  }
+
+  //////// Colision Circulo 6 //////////
+
+  if (colisionCir6 == false) {
+    if (dist(posX, posY, cir6.xPos, cir6.yPos) < cir6.tam/2 + 15) {
+      colisionCir6 = true;
+      cir6.xPos += width * 2;
+      cir6.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir6 == true) {
+    contColisionCir6 ++;
+  }
+
+  if (contColisionCir6 > 599) {
+    resetCir6 = true;
+  }
+
+  if (resetCir6) {
+    cir6.tam = 20;
+    cir6.contTam = 0;
+    cir6.colR = 0;
+    cir6.colG = 245;
+    cir6.colB = 255;
+    cir6.contColCir = 0;
+    cir6.contColCir2 = 0;
+    cir6.contColCir3 = 0;
+    cir6.contFrame = 0;
+    resetCir6 = false;
+  }
+
+  if (contColisionCir6 > 600) {
+    cir6.xPos = -60;
+    cir6.yPos = -360;
+    colisionCir6 = false;
+    contColisionCir6 = 0;
+  }
+
+  //////// Colision Circulo 7 //////////
+
+  if (colisionCir7 == false) {
+    if (dist(posX, posY, cir7.xPos, cir7.yPos) < cir7.tam/2 + 15) {
+      colisionCir7 = true;
+      cir7.xPos += width * 2;
+      cir7.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir7 == true) {
+    contColisionCir7 ++;
+  }
+
+  if (contColisionCir7 > 599) {
+    resetCir7 = true;
+  }
+
+  if (resetCir7) {
+    cir7.tam = 20;
+    cir7.contTam = 0;
+    cir7.colR = 0;
+    cir7.colG = 245;
+    cir7.colB = 255;
+    cir7.contColCir = 0;
+    cir7.contColCir2 = 0;
+    cir7.contColCir3 = 0;
+    cir7.contFrame = 0;
+    resetCir7 = false;
+  }
+
+  if (contColisionCir7 > 600) {
+    cir7.xPos = -30;
+    cir7.yPos = -360;
+    colisionCir7 = false;
+    contColisionCir7 = 0;
+  }
+
+  //////// Colision Circulo 8 //////////
+
+  if (colisionCir8 == false) {
+    if (dist(posX, posY, cir8.xPos, cir8.yPos) < cir8.tam/2 + 15) {
+      colisionCir8 = true;
+      cir8.xPos += width * 2;
+      cir8.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir8 == true) {
+    contColisionCir8 ++;
+  }
+
+  if (contColisionCir8 > 599) {
+    resetCir8 = true;
+  }
+
+  if (resetCir8) {
+    cir8.tam = 20;
+    cir8.contTam = 0;
+    cir8.colR = 0;
+    cir8.colG = 245;
+    cir8.colB = 255;
+    cir8.contColCir = 0;
+    cir8.contColCir2 = 0;
+    cir8.contColCir3 = 0;
+    cir8.contFrame = 0;
+    resetCir8 = false;
+  }
+
+  if (contColisionCir8 > 600) {
+    cir8.xPos = -330;
+    cir8.yPos = -330;
+    colisionCir8 = false;
+    contColisionCir8 = 0;
+  }
+
+  //////// Colision Circulo 9 //////////
+
+  if (colisionCir9 == false) {
+    if (dist(posX, posY, cir9.xPos, cir9.yPos) < cir9.tam/2 + 15) {
+      colisionCir9 = true;
+      cir9.xPos += width * 2;
+      cir9.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir9 == true) {
+    contColisionCir9 ++;
+  }
+
+  if (contColisionCir9 > 599) {
+    resetCir9 = true;
+  }
+
+  if (resetCir9) {
+    cir9.tam = 20;
+    cir9.contTam = 0;
+    cir9.colR = 0;
+    cir9.colG = 245;
+    cir9.colB = 255;
+    cir9.contColCir = 0;
+    cir9.contColCir2 = 0;
+    cir9.contColCir3 = 0;
+    cir9.contFrame = 0;
+    resetCir9 = false;
+  }
+
+  if (contColisionCir9 > 600) {
+    cir9.xPos = -300;
+    cir9.yPos = -330;
+    colisionCir9 = false;
+    contColisionCir9 = 0;
+  }
+
+  //////// Colision Circulo 10 //////////
+
+  if (colisionCir10 == false) {
+    if (dist(posX, posY, cir10.xPos, cir10.yPos) < cir10.tam/2 + 15) {
+      colisionCir10 = true;
+      cir10.xPos += width * 2;
+      cir10.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir10 == true) {
+    contColisionCir10 ++;
+  }
+
+  if (contColisionCir10 > 599) {
+    resetCir10 = true;
+  }
+
+  if (resetCir10) {
+    cir10.tam = 20;
+    cir10.contTam = 0;
+    cir10.colR = 0;
+    cir10.colG = 245;
+    cir10.colB = 255;
+    cir10.contColCir = 0;
+    cir10.contColCir2 = 0;
+    cir10.contColCir3 = 0;
+    cir10.contFrame = 0;
+    resetCir10 = false;
+  }
+
+  if (contColisionCir10 > 600) {
+    cir10.xPos = -210;
+    cir10.yPos = -330;
+    colisionCir10 = false;
+    contColisionCir10 = 0;
+  }
+
   //////// Colision Circulo 83  //////////
 
   if (colisionCir83 == false) {
@@ -2658,6 +3000,576 @@ void draw() {
     cir102.yPos = 210;
     colisionCir102 = false;
     contColisionCir102 = 0;
+  }
+
+  //////// Colision Circulo 103 //////////
+
+  if (colisionCir103 == false) {
+    if (dist(posX, posY, cir103.xPos, cir103.yPos) < cir103.tam/2 + 15) {
+      colisionCir103 = true;
+      cir103.xPos += width * 2;
+      cir103.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir103 == true) {
+    contColisionCir103 ++;
+  }
+
+  if (contColisionCir103 > 599) {
+    resetCir103 = true;
+  }
+
+  if (resetCir103) {
+    cir103.tam = 20;
+    cir103.contTam = 0;
+    cir103.colR = 0;
+    cir103.colG = 245;
+    cir103.colB = 255;
+    cir103.contColCir = 0;
+    cir103.contColCir2 = 0;
+    cir103.contColCir3 = 0;
+    cir103.contFrame = 0;
+    resetCir103 = false;
+  }
+
+  if (contColisionCir103 > 600) {
+    cir103.xPos = 330;
+    cir103.yPos = 210;
+    colisionCir103 = false;
+    contColisionCir103 = 0;
+  }
+
+  //////// Colision Circulo 104 //////////
+
+  if (colisionCir104 == false) {
+    if (dist(posX, posY, cir104.xPos, cir104.yPos) < cir104.tam/2 + 15) {
+      colisionCir104 = true;
+      cir104.xPos += width * 2;
+      cir104.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir104 == true) {
+    contColisionCir104 ++;
+  }
+
+  if (contColisionCir104 > 599) {
+    resetCir104 = true;
+  }
+
+  if (resetCir104) {
+    cir104.tam = 20;
+    cir104.contTam = 0;
+    cir104.colR = 0;
+    cir104.colG = 245;
+    cir104.colB = 255;
+    cir104.contColCir = 0;
+    cir104.contColCir2 = 0;
+    cir104.contColCir3 = 0;
+    cir104.contFrame = 0;
+    resetCir104 = false;
+  }
+
+  if (contColisionCir104 > 600) {
+    cir104.xPos = 210;
+    cir104.yPos = 270;
+    colisionCir104 = false;
+    contColisionCir104 = 0;
+  }
+
+  //////// Colision Circulo 105 //////////
+
+  if (colisionCir105 == false) {
+    if (dist(posX, posY, cir105.xPos, cir105.yPos) < cir105.tam/2 + 15) {
+      colisionCir105 = true;
+      cir105.xPos += width * 2;
+      cir105.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir105 == true) {
+    contColisionCir105 ++;
+  }
+
+  if (contColisionCir105 > 599) {
+    resetCir105 = true;
+  }
+
+  if (resetCir105) {
+    cir105.tam = 20;
+    cir105.contTam = 0;
+    cir105.colR = 0;
+    cir105.colG = 245;
+    cir105.colB = 255;
+    cir105.contColCir = 0;
+    cir105.contColCir2 = 0;
+    cir105.contColCir3 = 0;
+    cir105.contFrame = 0;
+    resetCir105 = false;
+  }
+
+  if (contColisionCir105 > 600) {
+    cir105.xPos = 300;
+    cir105.yPos = 270;
+    colisionCir105 = false;
+    contColisionCir105 = 0;
+  }
+
+  //////// Colision Circulo 106 //////////
+
+  if (colisionCir106 == false) {
+    if (dist(posX, posY, cir106.xPos, cir106.yPos) < cir106.tam/2 + 15) {
+      colisionCir106 = true;
+      cir106.xPos += width * 2;
+      cir106.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir106 == true) {
+    contColisionCir106 ++;
+  }
+
+  if (contColisionCir106 > 599) {
+    resetCir106 = true;
+  }
+
+  if (resetCir106) {
+    cir106.tam = 20;
+    cir106.contTam = 0;
+    cir106.colR = 0;
+    cir106.colG = 245;
+    cir106.colB = 255;
+    cir106.contColCir = 0;
+    cir106.contColCir2 = 0;
+    cir106.contColCir3 = 0;
+    cir106.contFrame = 0;
+    resetCir106 = false;
+  }
+
+  if (contColisionCir106 > 600) {
+    cir106.xPos = 60;
+    cir106.yPos = 300;
+    colisionCir106 = false;
+    contColisionCir106 = 0;
+  }
+
+  //////// Colision Circulo 107 //////////
+
+  if (colisionCir107 == false) {
+    if (dist(posX, posY, cir107.xPos, cir107.yPos) < cir107.tam/2 + 15) {
+      colisionCir107 = true;
+      cir107.xPos += width * 2;
+      cir107.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir107 == true) {
+    contColisionCir107 ++;
+  }
+
+  if (contColisionCir107 > 599) {
+    resetCir107 = true;
+  }
+
+  if (resetCir107) {
+    cir107.tam = 20;
+    cir107.contTam = 0;
+    cir107.colR = 0;
+    cir107.colG = 245;
+    cir107.colB = 255;
+    cir107.contColCir = 0;
+    cir107.contColCir2 = 0;
+    cir107.contColCir3 = 0;
+    cir107.contFrame = 0;
+    resetCir107 = false;
+  }
+
+  if (contColisionCir107 > 600) {
+    cir107.xPos = 90;
+    cir107.yPos = 300;
+    colisionCir107 = false;
+    contColisionCir107 = 0;
+  }
+
+  //////// Colision Circulo 108 //////////
+
+  if (colisionCir108 == false) {
+    if (dist(posX, posY, cir108.xPos, cir108.yPos) < cir108.tam/2 + 15) {
+      colisionCir108 = true;
+      cir108.xPos += width * 2;
+      cir108.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir108 == true) {
+    contColisionCir108 ++;
+  }
+
+  if (contColisionCir108 > 599) {
+    resetCir108 = true;
+  }
+
+  if (resetCir108) {
+    cir108.tam = 20;
+    cir108.contTam = 0;
+    cir108.colR = 0;
+    cir108.colG = 245;
+    cir108.colB = 255;
+    cir108.contColCir = 0;
+    cir108.contColCir2 = 0;
+    cir108.contColCir3 = 0;
+    cir108.contFrame = 0;
+    resetCir108 = false;
+  }
+
+  if (contColisionCir108 > 600) {
+    cir108.xPos = 150;
+    cir108.yPos = 300;
+    colisionCir108 = false;
+    contColisionCir108 = 0;
+  }
+
+  //////// Colision Circulo 109 //////////
+
+  if (colisionCir109 == false) {
+    if (dist(posX, posY, cir109.xPos, cir109.yPos) < cir109.tam/2 + 15) {
+      colisionCir109 = true;
+      cir109.xPos += width * 2;
+      cir109.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir109 == true) {
+    contColisionCir109 ++;
+  }
+
+  if (contColisionCir109 > 599) {
+    resetCir109 = true;
+  }
+
+  if (resetCir109) {
+    cir109.tam = 20;
+    cir109.contTam = 0;
+    cir109.colR = 0;
+    cir109.colG = 245;
+    cir109.colB = 255;
+    cir109.contColCir = 0;
+    cir109.contColCir2 = 0;
+    cir109.contColCir3 = 0;
+    cir109.contFrame = 0;
+    resetCir109 = false;
+  }
+
+  if (contColisionCir109 > 600) {
+    cir109.xPos = 210;
+    cir109.yPos = 300;
+    colisionCir109 = false;
+    contColisionCir109 = 0;
+  }
+
+  //////// Colision Circulo 110 //////////
+
+  if (colisionCir110 == false) {
+    if (dist(posX, posY, cir110.xPos, cir110.yPos) < cir110.tam/2 + 15) {
+      colisionCir110 = true;
+      cir110.xPos += width * 2;
+      cir110.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir110 == true) {
+    contColisionCir110 ++;
+  }
+
+  if (contColisionCir110 > 599) {
+    resetCir110 = true;
+  }
+
+  if (resetCir110) {
+    cir110.tam = 20;
+    cir110.contTam = 0;
+    cir110.colR = 0;
+    cir110.colG = 245;
+    cir110.colB = 255;
+    cir110.contColCir = 0;
+    cir110.contColCir2 = 0;
+    cir110.contColCir3 = 0;
+    cir110.contFrame = 0;
+    resetCir110 = false;
+  }
+
+  if (contColisionCir110 > 600) {
+    cir110.xPos = 270;
+    cir110.yPos = 300;
+    colisionCir110 = false;
+    contColisionCir110 = 0;
+  }
+
+  //////// Colision Circulo 111 //////////
+
+  if (colisionCir111 == false) {
+    if (dist(posX, posY, cir111.xPos, cir111.yPos) < cir111.tam/2 + 15) {
+      colisionCir111 = true;
+      cir111.xPos += width * 2;
+      cir111.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir111 == true) {
+    contColisionCir111 ++;
+  }
+
+  if (contColisionCir111 > 599) {
+    resetCir111 = true;
+  }
+
+  if (resetCir111) {
+    cir111.tam = 20;
+    cir111.contTam = 0;
+    cir111.colR = 0;
+    cir111.colG = 245;
+    cir111.colB = 255;
+    cir111.contColCir = 0;
+    cir111.contColCir2 = 0;
+    cir111.contColCir3 = 0;
+    cir111.contFrame = 0;
+    resetCir111 = false;
+  }
+
+  if (contColisionCir111 > 600) {
+    cir111.xPos = 300;
+    cir111.yPos = 330;
+    colisionCir111 = false;
+    contColisionCir111= 0;
+  }
+
+  //////// Colision Circulo 112 //////////
+
+  if (colisionCir112 == false) {
+    if (dist(posX, posY, cir112.xPos, cir112.yPos) < cir112.tam/2 + 15) {
+      colisionCir112 = true;
+      cir112.xPos += width * 2;
+      cir112.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir112 == true) {
+    contColisionCir112 ++;
+  }
+
+  if (contColisionCir112 > 599) {
+    resetCir112 = true;
+  }
+
+  if (resetCir112) {
+    cir112.tam = 20;
+    cir112.contTam = 0;
+    cir112.colR = 0;
+    cir112.colG = 245;
+    cir112.colB = 255;
+    cir112.contColCir = 0;
+    cir112.contColCir2 = 0;
+    cir112.contColCir3 = 0;
+    cir112.contFrame = 0;
+    resetCir112 = false;
+  }
+
+  if (contColisionCir112 > 600) {
+    cir112.xPos = 360;
+    cir112.yPos = 330;
+    colisionCir112 = false;
+    contColisionCir112 = 0;
+  }
+
+  //////// Colision Circulo 113 //////////
+
+  if (colisionCir113 == false) {
+    if (dist(posX, posY, cir113.xPos, cir113.yPos) < cir113.tam/2 + 15) {
+      colisionCir113 = true;
+      cir113.xPos += width * 2;
+      cir113.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir113 == true) {
+    contColisionCir113 ++;
+  }
+
+  if (contColisionCir113 > 599) {
+    resetCir113 = true;
+  }
+
+  if (resetCir113) {
+    cir113.tam = 20;
+    cir113.contTam = 0;
+    cir113.colR = 0;
+    cir113.colG = 245;
+    cir113.colB = 255;
+    cir113.contColCir = 0;
+    cir113.contColCir2 = 0;
+    cir113.contColCir3 = 0;
+    cir113.contFrame = 0;
+    resetCir113 = false;
+  }
+
+  if (contColisionCir113 > 600) {
+    cir113.xPos = 60;
+    cir113.yPos = 360;
+    colisionCir113 = false;
+    contColisionCir113 = 0;
+  }
+
+  //////// Colision Circulo 114 //////////
+
+  if (colisionCir114 == false) {
+    if (dist(posX, posY, cir114.xPos, cir114.yPos) < cir114.tam/2 + 15) {
+      colisionCir114 = true;
+      cir114.xPos += width * 2;
+      cir114.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir114 == true) {
+    contColisionCir114 ++;
+  }
+
+  if (contColisionCir114 > 599) {
+    resetCir114 = true;
+  }
+
+  if (resetCir114) {
+    cir114.tam = 20;
+    cir114.contTam = 0;
+    cir114.colR = 0;
+    cir114.colG = 245;
+    cir114.colB = 255;
+    cir114.contColCir = 0;
+    cir114.contColCir2 = 0;
+    cir114.contColCir3 = 0;
+    cir114.contFrame = 0;
+    resetCir114 = false;
+  }
+
+  if (contColisionCir114 > 600) {
+    cir114.xPos = 120;
+    cir114.yPos = 360;
+    colisionCir114 = false;
+    contColisionCir114 = 0;
+  }
+
+  //////// Colision Circulo 115 //////////
+
+  if (colisionCir115 == false) {
+    if (dist(posX, posY, cir115.xPos, cir115.yPos) < cir115.tam/2 + 15) {
+      colisionCir115 = true;
+      cir115.xPos += width * 2;
+      cir115.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir115 == true) {
+    contColisionCir115 ++;
+  }
+
+  if (contColisionCir115 > 599) {
+    resetCir115 = true;
+  }
+
+  if (resetCir115) {
+    cir115.tam = 20;
+    cir115.contTam = 0;
+    cir115.colR = 0;
+    cir115.colG = 245;
+    cir115.colB = 255;
+    cir115.contColCir = 0;
+    cir115.contColCir2 = 0;
+    cir115.contColCir3 = 0;
+    cir115.contFrame = 0;
+    resetCir115 = false;
+  }
+
+  if (contColisionCir115 > 600) {
+    cir115.xPos = 150;
+    cir115.yPos = 360;
+    colisionCir115 = false;
+    contColisionCir115 = 0;
+  }
+
+  //////// Colision Circulo 116 //////////
+
+  if (colisionCir116 == false) {
+    if (dist(posX, posY, cir116.xPos, cir116.yPos) < cir116.tam/2 + 15) {
+      colisionCir116 = true;
+      cir116.xPos += width * 2;
+      cir116.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir116 == true) {
+    contColisionCir116 ++;
+  }
+
+  if (contColisionCir116 > 599) {
+    resetCir116 = true;
+  }
+
+  if (resetCir116) {
+    cir116.tam = 20;
+    cir116.contTam = 0;
+    cir116.colR = 0;
+    cir116.colG = 245;
+    cir116.colB = 255;
+    cir116.contColCir = 0;
+    cir116.contColCir2 = 0;
+    cir116.contColCir3 = 0;
+    cir116.contFrame = 0;
+    resetCir116 = false;
+  }
+
+  if (contColisionCir116 > 600) {
+    cir116.xPos = 210;
+    cir116.yPos = 360;
+    colisionCir116 = false;
+    contColisionCir116 = 0;
+  }
+
+  //////// Colision Circulo 117 //////////
+
+  if (colisionCir117 == false) {
+    if (dist(posX, posY, cir117.xPos, cir117.yPos) < cir117.tam/2 + 15) {
+      colisionCir117 = true;
+      cir117.xPos += width * 2;
+      cir117.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir117 == true) {
+    contColisionCir117 ++;
+  }
+
+  if (contColisionCir117 > 599) {
+    resetCir117 = true;
+  }
+
+  if (resetCir117) {
+    cir117.tam = 20;
+    cir117.contTam = 0;
+    cir117.colR = 0;
+    cir117.colG = 245;
+    cir117.colB = 255;
+    cir117.contColCir = 0;
+    cir117.contColCir2 = 0;
+    cir117.contColCir3 = 0;
+    cir117.contFrame = 0;
+    resetCir117 = false;
+  }
+
+  if (contColisionCir117 > 600) {
+    cir117.xPos = 240;
+    cir117.yPos = 360;
+    colisionCir117 = false;
+    contColisionCir117 = 0;
   }
 
   ////////// Colision Cuadrado 1 ////////////
