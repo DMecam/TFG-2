@@ -19,15 +19,475 @@ int m;
 boolean tamMaxTri1;
 //interruptor de colision de las formas
 boolean colisionCir1;
+boolean colisionCir2;
+boolean colisionCir3;
+boolean colisionCir4;
+boolean colisionCir5;
+boolean colisionCir6;
+boolean colisionCir7;
+boolean colisionCir8;
+boolean colisionCir9;
+boolean colisionCir10;
+boolean colisionCir11;
+boolean colisionCir12;
+boolean colisionCir13;
+boolean colisionCir14;
+boolean colisionCir15;
+boolean colisionCir16;
+boolean colisionCir17;
+boolean colisionCir18;
+boolean colisionCir19;
+boolean colisionCir20;
+boolean colisionCir21;
+boolean colisionCir22;
+boolean colisionCir23;
+boolean colisionCir24;
+boolean colisionCir25;
+boolean colisionCir26;
+boolean colisionCir27;
+boolean colisionCir28;
+boolean colisionCir29;
+boolean colisionCir30;
+boolean colisionCir31;
+boolean colisionCir32;
+boolean colisionCir33;
+boolean colisionCir34;
+boolean colisionCir35;
+boolean colisionCir36;
+boolean colisionCir37;
+boolean colisionCir38;
+boolean colisionCir39;
+boolean colisionCir40;
+boolean colisionCir41;
+boolean colisionCir42;
+boolean colisionCir43;
+boolean colisionCir44;
+boolean colisionCir45;
+boolean colisionCir46;
+boolean colisionCir47;
+boolean colisionCir48;
+boolean colisionCir49;
+boolean colisionCir50;
+boolean colisionCir51;
+boolean colisionCir52;
+boolean colisionCir53;
+boolean colisionCir54;
+boolean colisionCir55;
+boolean colisionCir56;
+boolean colisionCir57;
+boolean colisionCir58;
+boolean colisionCir59;
+boolean colisionCir60;
+boolean colisionCir61;
+boolean colisionCir62;
+boolean colisionCir63;
+boolean colisionCir64;
+boolean colisionCir65;
+boolean colisionCir66;
+boolean colisionCir67;
+boolean colisionCir68;
+boolean colisionCir69;
+boolean colisionCir70;
+boolean colisionCir71;
+boolean colisionCir72;
+boolean colisionCir73;
+boolean colisionCir74;
+boolean colisionCir75;
+boolean colisionCir76;
+boolean colisionCir77;
+boolean colisionCir78;
+boolean colisionCir79;
+boolean colisionCir80;
+boolean colisionCir81;
+boolean colisionCir82;
+boolean colisionCir83;
+boolean colisionCir84;
+boolean colisionCir85;
+boolean colisionCir86;
+boolean colisionCir87;
+boolean colisionCir88;
+boolean colisionCir89;
+boolean colisionCir90;
+boolean colisionCir91;
+boolean colisionCir92;
+boolean colisionCir93;
+boolean colisionCir94;
+boolean colisionCir95;
+boolean colisionCir96;
+boolean colisionCir97;
+boolean colisionCir98;
+boolean colisionCir99;
+boolean colisionCir100;
+boolean colisionCir101;
+boolean colisionCir102;
+boolean colisionCir103;
+boolean colisionCir104;
+boolean colisionCir105;
+boolean colisionCir106;
+boolean colisionCir107;
+boolean colisionCir108;
+boolean colisionCir109;
+boolean colisionCir110;
+boolean colisionCir111;
+boolean colisionCir112;
+boolean colisionCir113;
+boolean colisionCir114;
+boolean colisionCir115;
+boolean colisionCir116;
+boolean colisionCir117;
+boolean colisionCir118;
+boolean colisionCir119;
+boolean colisionCir120;
+boolean colisionCir121;
+boolean colisionCir122;
+boolean colisionCir123;
+boolean colisionCir124;
+boolean colisionCir125;
+boolean colisionCir126;
+boolean colisionCir127;
+boolean colisionCir128;
+boolean colisionCir129;
+boolean colisionCir130;
+boolean colisionCir131;
+boolean colisionCir132;
+boolean colisionCir133;
+boolean colisionCir134;
+boolean colisionCir135;
+boolean colisionCir136;
+boolean colisionCir137;
+boolean colisionCir138;
+boolean colisionCir139;
+boolean colisionCir140;
+boolean colisionCir141;
+boolean colisionCir142;
+boolean colisionCir143;
+boolean colisionCir144;
+boolean colisionCir145;
+boolean colisionCir146;
+boolean colisionCir147;
+boolean colisionCir148;
+boolean colisionCir149;
+boolean colisionCir150;
+boolean colisionCir151;
+boolean colisionCir152;
+boolean colisionCirerr1;
+
 boolean colisionCu1;
 boolean colisionTri1;
+
 //contador que controla el tiempo de la consecuencia de la colision
 float contColisionCir1;
+float contColisionCir2;
+float contColisionCir3;
+float contColisionCir4;
+float contColisionCir5;
+float contColisionCir6;
+float contColisionCir7;
+float contColisionCir8;
+float contColisionCir9;
+float contColisionCir10;
+float contColisionCir11;
+float contColisionCir12;
+float contColisionCir13;
+float contColisionCir14;
+float contColisionCir15;
+float contColisionCir16;
+float contColisionCir17;
+float contColisionCir18;
+float contColisionCir19;
+float contColisionCir20;
+float contColisionCir21;
+float contColisionCir22;
+float contColisionCir23;
+float contColisionCir24;
+float contColisionCir25;
+float contColisionCir26;
+float contColisionCir27;
+float contColisionCir28;
+float contColisionCir29;
+float contColisionCir30;
+float contColisionCir31;
+float contColisionCir32;
+float contColisionCir33;
+float contColisionCir34;
+float contColisionCir35;
+float contColisionCir36;
+float contColisionCir37;
+float contColisionCir38;
+float contColisionCir39;
+float contColisionCir40;
+float contColisionCir41;
+float contColisionCir42;
+float contColisionCir43;
+float contColisionCir44;
+float contColisionCir45;
+float contColisionCir46;
+float contColisionCir47;
+float contColisionCir48;
+float contColisionCir49;
+float contColisionCir50;
+float contColisionCir51;
+float contColisionCir52;
+float contColisionCir53;
+float contColisionCir54;
+float contColisionCir55;
+float contColisionCir56;
+float contColisionCir57;
+float contColisionCir58;
+float contColisionCir59;
+float contColisionCir60;
+float contColisionCir61;
+float contColisionCir62;
+float contColisionCir63;
+float contColisionCir64;
+float contColisionCir65;
+float contColisionCir66;
+float contColisionCir67;
+float contColisionCir68;
+float contColisionCir69;
+float contColisionCir70;
+float contColisionCir71;
+float contColisionCir72;
+float contColisionCir73;
+float contColisionCir74;
+float contColisionCir75;
+float contColisionCir76;
+float contColisionCir77;
+float contColisionCir78;
+float contColisionCir79;
+float contColisionCir80;
+float contColisionCir81;
+float contColisionCir82;
+float contColisionCir83;
+float contColisionCir84;
+float contColisionCir85;
+float contColisionCir86;
+float contColisionCir87;
+float contColisionCir88;
+float contColisionCir89;
+float contColisionCir90;
+float contColisionCir91;
+float contColisionCir92;
+float contColisionCir93;
+float contColisionCir94;
+float contColisionCir95;
+float contColisionCir96;
+float contColisionCir97;
+float contColisionCir98;
+float contColisionCir99;
+float contColisionCir100;
+float contColisionCir101;
+float contColisionCir102;
+float contColisionCir103;
+float contColisionCir104;
+float contColisionCir105;
+float contColisionCir106;
+float contColisionCir107;
+float contColisionCir108;
+float contColisionCir109;
+float contColisionCir110;
+float contColisionCir111;
+float contColisionCir112;
+float contColisionCir113;
+float contColisionCir114;
+float contColisionCir115;
+float contColisionCir116;
+float contColisionCir117;
+float contColisionCir118;
+float contColisionCir119;
+float contColisionCir120;
+float contColisionCir121;
+float contColisionCir122;
+float contColisionCir123;
+float contColisionCir124;
+float contColisionCir125;
+float contColisionCir126;
+float contColisionCir127;
+float contColisionCir128;
+float contColisionCir129;
+float contColisionCir130;
+float contColisionCir131;
+float contColisionCir132;
+float contColisionCir133;
+float contColisionCir134;
+float contColisionCir135;
+float contColisionCir136;
+float contColisionCir137;
+float contColisionCir138;
+float contColisionCir139;
+float contColisionCir140;
+float contColisionCir141;
+float contColisionCir142;
+float contColisionCir143;
+float contColisionCir144;
+float contColisionCir145;
+float contColisionCir146;
+float contColisionCir147;
+float contColisionCir148;
+float contColisionCir149;
+float contColisionCir150;
+float contColisionCir151;
+float contColisionCir152;
+float contColisionCirerr1;
+
 float contColisionCu1;
 float contColisionTri1;
 //interruptor que resetea el proceso de la forma una vez que vuelve a la ser
 //visible en la pantalla
 boolean resetCir1;
+boolean resetCir2;
+boolean resetCir3;
+boolean resetCir4;
+boolean resetCir5;
+boolean resetCir6;
+boolean resetCir7;
+boolean resetCir8;
+boolean resetCir9;
+boolean resetCir10;
+boolean resetCir11;
+boolean resetCir12;
+boolean resetCir13;
+boolean resetCir14;
+boolean resetCir15;
+boolean resetCir16;
+boolean resetCir17;
+boolean resetCir18;
+boolean resetCir19;
+boolean resetCir20;
+boolean resetCir21;
+boolean resetCir22;
+boolean resetCir23;
+boolean resetCir24;
+boolean resetCir25;
+boolean resetCir26;
+boolean resetCir27;
+boolean resetCir28;
+boolean resetCir29;
+boolean resetCir30;
+boolean resetCir31;
+boolean resetCir32;
+boolean resetCir33;
+boolean resetCir34;
+boolean resetCir35;
+boolean resetCir36;
+boolean resetCir37;
+boolean resetCir38;
+boolean resetCir39;
+boolean resetCir40;
+boolean resetCir41;
+boolean resetCir42;
+boolean resetCir43;
+boolean resetCir44;
+boolean resetCir45;
+boolean resetCir46;
+boolean resetCir47;
+boolean resetCir48;
+boolean resetCir49;
+boolean resetCir50;
+boolean resetCir51;
+boolean resetCir52;
+boolean resetCir53;
+boolean resetCir54;
+boolean resetCir55;
+boolean resetCir56;
+boolean resetCir57;
+boolean resetCir58;
+boolean resetCir59;
+boolean resetCir60;
+boolean resetCir61;
+boolean resetCir62;
+boolean resetCir63;
+boolean resetCir64;
+boolean resetCir65;
+boolean resetCir66;
+boolean resetCir67;
+boolean resetCir68;
+boolean resetCir69;
+boolean resetCir70;
+boolean resetCir71;
+boolean resetCir72;
+boolean resetCir73;
+boolean resetCir74;
+boolean resetCir75;
+boolean resetCir76;
+boolean resetCir77;
+boolean resetCir78;
+boolean resetCir79;
+boolean resetCir80;
+boolean resetCir81;
+boolean resetCir82;
+boolean resetCir83;
+boolean resetCir84;
+boolean resetCir85;
+boolean resetCir86;
+boolean resetCir87;
+boolean resetCir88;
+boolean resetCir89;
+boolean resetCir90;
+boolean resetCir91;
+boolean resetCir92;
+boolean resetCir93;
+boolean resetCir94;
+boolean resetCir95;
+boolean resetCir96;
+boolean resetCir97;
+boolean resetCir98;
+boolean resetCir99;
+boolean resetCir100;
+boolean resetCir101;
+boolean resetCir102;
+boolean resetCir103;
+boolean resetCir104;
+boolean resetCir105;
+boolean resetCir106;
+boolean resetCir107;
+boolean resetCir108;
+boolean resetCir109;
+boolean resetCir110;
+boolean resetCir111;
+boolean resetCir112;
+boolean resetCir113;
+boolean resetCir114;
+boolean resetCir115;
+boolean resetCir116;
+boolean resetCir117;
+boolean resetCir118;
+boolean resetCir119;
+boolean resetCir120;
+boolean resetCir121;
+boolean resetCir122;
+boolean resetCir123;
+boolean resetCir124;
+boolean resetCir125;
+boolean resetCir126;
+boolean resetCir127;
+boolean resetCir128;
+boolean resetCir129;
+boolean resetCir130;
+boolean resetCir131;
+boolean resetCir132;
+boolean resetCir133;
+boolean resetCir134;
+boolean resetCir135;
+boolean resetCir136;
+boolean resetCir137;
+boolean resetCir138;
+boolean resetCir139;
+boolean resetCir140;
+boolean resetCir141;
+boolean resetCir142;
+boolean resetCir143;
+boolean resetCir144;
+boolean resetCir145;
+boolean resetCir146;
+boolean resetCir147;
+boolean resetCir148;
+boolean resetCir149;
+boolean resetCir150;
+boolean resetCir151;
+boolean resetCir152;
+boolean resetCirerr1;
+
 boolean resetCu1;
 boolean resetTri1;
 //contador de movimiento
@@ -1438,6 +1898,310 @@ void draw() {
     //desactiva el interruptor de colision
     colisionCir1 = false;
     contColisionCir1 = 0;
+  }
+
+  //////// Colision Circulo 83  //////////
+
+  if (colisionCir83 == false) {
+    if (dist(posX, posY, cir83.xPos, cir83.yPos) < cir83.tam/2 + 15) {
+      colisionCir83 = true;
+      cir83.xPos += width * 2;
+      cir83.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir83 == true) {
+    contColisionCir83 ++;
+  }
+
+  if (contColisionCir83 > 599) {
+    resetCir83 = true;
+  }
+
+  if (resetCir83) {
+    cir83.tam = 20;
+    cir83.contTam = 0;
+    cir83.colR = 0;
+    cir83.colG = 245;
+    cir83.colB = 255;
+    cir83.contColCir = 0;
+    cir83.contColCir2 = 0;
+    cir83.contColCir3 = 0;
+    cir83.contFrame = 0;
+    resetCir83 = false;
+  }
+
+  if (contColisionCir83 > 600) {
+    cir83.xPos = 30;
+    cir83.yPos = 30;
+    colisionCir83 = false;
+    contColisionCir83 = 0;
+  }
+
+  //////// Colision Circulo 84  //////////
+
+  if (colisionCir84 == false) {
+    if (dist(posX, posY, cir84.xPos, cir84.yPos) < cir84.tam/2 + 15) {
+      colisionCir84 = true;
+      cir84.xPos += width * 2;
+      cir84.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir84 == true) {
+    contColisionCir84 ++;
+  }
+
+  if (contColisionCir84 > 599) {
+    resetCir84 = true;
+  }
+
+  if (resetCir84) {
+    cir84.tam = 20;
+    cir84.contTam = 0;
+    cir84.colR = 0;
+    cir84.colG = 245;
+    cir84.colB = 255;
+    cir84.contColCir = 0;
+    cir84.contColCir2 = 0;
+    cir84.contColCir3 = 0;
+    cir84.contFrame = 0;
+    resetCir84 = false;
+  }
+
+  if (contColisionCir84 > 600) {
+    cir84.xPos = 60;
+    cir84.yPos = 30;
+    colisionCir84 = false;
+    contColisionCir84 = 0;
+  }
+
+  //////// Colision Circulo 85  //////////
+
+  if (colisionCir85 == false) {
+    if (dist(posX, posY, cir85.xPos, cir85.yPos) < cir85.tam/2 + 15) {
+      colisionCir85 = true;
+      cir85.xPos += width * 2;
+      cir85.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir85 == true) {
+    contColisionCir85 ++;
+  }
+
+  if (contColisionCir85 > 599) {
+    resetCir85 = true;
+  }
+
+  if (resetCir85) {
+    cir85.tam = 20;
+    cir85.contTam = 0;
+    cir85.colR = 0;
+    cir85.colG = 245;
+    cir85.colB = 255;
+    cir85.contColCir = 0;
+    cir85.contColCir2 = 0;
+    cir85.contColCir3 = 0;
+    cir85.contFrame = 0;
+    resetCir85 = false;
+  }
+
+  if (contColisionCir85 > 600) {
+    cir85.xPos = 90;
+    cir85.yPos = 30;
+    colisionCir85 = false;
+    contColisionCir85 = 0;
+  }
+
+  //////// Colision Circulo 86  //////////
+
+  if (colisionCir86 == false) {
+    if (dist(posX, posY, cir86.xPos, cir86.yPos) < cir86.tam/2 + 15) {
+      colisionCir86 = true;
+      cir86.xPos += width * 2;
+      cir86.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir86 == true) {
+    contColisionCir86 ++;
+  }
+
+  if (contColisionCir86 > 599) {
+    resetCir86 = true;
+  }
+
+  if (resetCir86) {
+    cir86.tam = 20;
+    cir86.contTam = 0;
+    cir86.colR = 0;
+    cir86.colG = 245;
+    cir86.colB = 255;
+    cir86.contColCir = 0;
+    cir86.contColCir2 = 0;
+    cir86.contColCir3 = 0;
+    cir86.contFrame = 0;
+    resetCir86 = false;
+  }
+
+  if (contColisionCir86 > 600) {
+    cir86.xPos = 270;
+    cir86.yPos = 30;
+    colisionCir86 = false;
+    contColisionCir86 = 0;
+  }
+
+  //////// Colision Circulo 87 //////////
+
+  if (colisionCir87 == false) {
+    if (dist(posX, posY, cir87.xPos, cir87.yPos) < cir87.tam/2 + 15) {
+      colisionCir87 = true;
+      cir87.xPos += width * 2;
+      cir87.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir87 == true) {
+    contColisionCir87 ++;
+  }
+
+  if (contColisionCir87 > 599) {
+    resetCir87 = true;
+  }
+
+  if (resetCir87) {
+    cir87.tam = 20;
+    cir87.contTam = 0;
+    cir87.colR = 0;
+    cir87.colG = 245;
+    cir87.colB = 255;
+    cir87.contColCir = 0;
+    cir87.contColCir2 = 0;
+    cir87.contColCir3 = 0;
+    cir87.contFrame = 0;
+    resetCir87 = false;
+  }
+
+  if (contColisionCir87 > 600) {
+    cir87.xPos = 300;
+    cir87.yPos = 30;
+    colisionCir87 = false;
+    contColisionCir87 = 0;
+  }
+
+  //////// Colision Circulo 88 //////////
+
+  if (colisionCir88 == false) {
+    if (dist(posX, posY, cir88.xPos, cir88.yPos) < cir88.tam/2 + 15) {
+      colisionCir88 = true;
+      cir88.xPos += width * 2;
+      cir88.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir88 == true) {
+    contColisionCir88 ++;
+  }
+
+  if (contColisionCir88 > 599) {
+    resetCir88 = true;
+  }
+
+  if (resetCir88) {
+    cir88.tam = 20;
+    cir88.contTam = 0;
+    cir88.colR = 0;
+    cir88.colG = 245;
+    cir88.colB = 255;
+    cir88.contColCir = 0;
+    cir88.contColCir2 = 0;
+    cir88.contColCir3 = 0;
+    cir88.contFrame = 0;
+    resetCir88 = false;
+  }
+
+  if (contColisionCir88 > 600) {
+    cir88.xPos = 30;
+    cir88.yPos = 60;
+    colisionCir88 = false;
+    contColisionCir88 = 0;
+  }
+
+  //////// Colision Circulo 89 //////////
+
+  if (colisionCir89 == false) {
+    if (dist(posX, posY, cir89.xPos, cir89.yPos) < cir89.tam/2 + 15) {
+      colisionCir89 = true;
+      cir89.xPos += width * 2;
+      cir89.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir89 == true) {
+    contColisionCir89 ++;
+  }
+
+  if (contColisionCir89 > 599) {
+    resetCir89 = true;
+  }
+
+  if (resetCir89) {
+    cir89.tam = 20;
+    cir89.contTam = 0;
+    cir89.colR = 0;
+    cir89.colG = 245;
+    cir89.colB = 255;
+    cir89.contColCir = 0;
+    cir89.contColCir2 = 0;
+    cir89.contColCir3 = 0;
+    cir89.contFrame = 0;
+    resetCir89 = false;
+  }
+
+  if (contColisionCir89 > 600) {
+    cir89.xPos = 90;
+    cir89.yPos = 60;
+    colisionCir89 = false;
+    contColisionCir89 = 0;
+  }
+
+  //////// Colision Circulo 90 //////////
+
+  if (colisionCir90 == false) {
+    if (dist(posX, posY, cir90.xPos, cir90.yPos) < cir90.tam/2 + 15) {
+      colisionCir90 = true;
+      cir90.xPos += width * 2;
+      cir90.yPos += height * 2;
+    }
+  }
+
+  if (colisionCir90 == true) {
+    contColisionCir90 ++;
+  }
+
+  if (contColisionCir90 > 599) {
+    resetCir90 = true;
+  }
+
+  if (resetCir90) {
+    cir90.tam = 20;
+    cir90.contTam = 0;
+    cir90.colR = 0;
+    cir90.colG = 245;
+    cir90.colB = 255;
+    cir90.contColCir = 0;
+    cir90.contColCir2 = 0;
+    cir90.contColCir3 = 0;
+    cir90.contFrame = 0;
+    resetCir90 = false;
+  }
+
+  if (contColisionCir90 > 600) {
+    cir90.xPos = 270;
+    cir90.yPos = 60;
+    colisionCir90 = false;
+    contColisionCir90 = 0;
   }
 
   ////////// Colision Cuadrado 1 ////////////

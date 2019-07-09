@@ -622,7 +622,8 @@
 - tri118 (30, 350)
 - tri119 (180, 350)
 - tri120 (270, 350)
-- //Cuadrante 4
+
+**Cuadrante 4**
 - tri121 (-300, 20)
 - tri122 (-270, 20)
 - tri123 (-180, 20)
@@ -659,3 +660,52 @@
 - tri154 (-150, 320)
 - tri155 (-90, 350)
 - tri156 (-30, 350)
+
+
+***
+
+### Colision circulos
+
+**Cuadrante 1**
+
+**Cuadrante 2**
+
+**Cuadrante 3**
+
+//////// Colision Circulo  //////////
+
+if (colisionCir1 == false) {
+  if (dist(posX, posY, cir1.xPos, cir1.yPos) < cir1.tam/2 + 15) {
+    colisionCir1 = true;
+    cir1.xPos += width * 2;
+    cir1.yPos += height * 2;
+  }
+}
+
+if (colisionCir1 == true) {
+  contColisionCir1 ++;
+}
+
+if (contColisionCir1 > 599) {
+  resetCir1 = true;
+}
+
+if (resetCir1) {
+  cir1.tam = 20;
+  cir1.contTam = 0;
+  cir1.colR = 0;
+  cir1.colG = 245;
+  cir1.colB = 255;
+  cir1.contColCir = 0;
+  cir1.contColCir2 = 0;
+  cir1.contColCir3 = 0;
+  cir1.contFrame = 0;
+  resetCir1 = false;
+}
+
+if (contColisionCir1 > 600) {
+  cir1.xPos = -240;
+  cir1.yPos = 0;
+  colisionCir1 = false;
+  contColisionCir1 = 0;
+}
