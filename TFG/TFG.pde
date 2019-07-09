@@ -516,7 +516,61 @@ Circulo cir150 = new Circulo(-30, 330);
 Circulo cir151 = new Circulo(-150, 360);
 Circulo cir152 = new Circulo(-60, 360);
 
-Triangulo tri1 = new Triangulo(430, -10);
+//Crea los objetos de clase triangulo
+//Linea Y 0
+Triangulo tri1 = new Triangulo(-300, -10);
+Triangulo tri2 = new Triangulo(-210, -10);
+Triangulo tri3 = new Triangulo(60, -10);
+Triangulo tri4 = new Triangulo(120, -10);
+Triangulo tri5 = new Triangulo(150, -10);
+Triangulo tri6 = new Triangulo(300, -10);
+//Linea X 0
+Triangulo tri7 = new Triangulo(0, -370);
+Triangulo tri8 = new Triangulo(0, -310);
+Triangulo tri9 = new Triangulo(0, -220);
+Triangulo tri10 = new Triangulo(0, -100);
+Triangulo tri11 = new Triangulo(0, -40);
+Triangulo tri12 = new Triangulo(0, 50);
+Triangulo tri13 = new Triangulo(0, 200);
+//Cuadrante 1
+Triangulo tri14 = new Triangulo(-150, -370);
+Triangulo tri15 = new Triangulo(-120, -370);
+Triangulo tri16 = new Triangulo(-270, -340);
+Triangulo tri17 = new Triangulo(-240, -340);
+Triangulo tri18 = new Triangulo(-150, -340);
+Triangulo tri19 = new Triangulo(-210, -280);
+Triangulo tri20 = new Triangulo(-150, -280);
+Triangulo tri21 = new Triangulo(-60, -280);
+Triangulo tri22 = new Triangulo(-330, -250);
+Triangulo tri23 = new Triangulo(-210, -250);
+Triangulo tri24 = new Triangulo(-120, -250);
+Triangulo tri25 = new Triangulo(-90, -250);
+Triangulo tri26 = new Triangulo(-30, -250);
+Triangulo tri27 = new Triangulo(-330, -220);
+Triangulo tri28 = new Triangulo(-300, -220);
+Triangulo tri29 = new Triangulo(-270, -220);
+Triangulo tri30 = new Triangulo(-210, -220);
+Triangulo tri31 = new Triangulo(-30, -220);
+Triangulo tri32 = new Triangulo(-360, -160);
+Triangulo tri33 = new Triangulo(-330, -160);
+Triangulo tri34 = new Triangulo(-270, -160);
+Triangulo tri35 = new Triangulo(-210, -160);
+Triangulo tri36 = new Triangulo(-120, -160);
+Triangulo tri37 = new Triangulo(-90, -160);
+Triangulo tri38 = new Triangulo(-60, -160);
+Triangulo tri39 = new Triangulo(-210, -130);
+Triangulo tri40 = new Triangulo(-30, -130);
+Triangulo tri41 = new Triangulo(-300, -100);
+Triangulo tri42 = new Triangulo(-240, -100);
+Triangulo tri43 = new Triangulo(-120, -100);
+Triangulo tri44 = new Triangulo(-330, -70);
+Triangulo tri45 = new Triangulo(-300, -70);
+Triangulo tri46 = new Triangulo(-240, -70);
+Triangulo tri47 = new Triangulo(-120, -70);
+Triangulo tri48 = new Triangulo(-270, -40);
+Triangulo tri49 = new Triangulo(-210, -40);
+Triangulo tri50 = new Triangulo(-180, -40);
+//Cuadrante 2
 
 void setup() {
   //define el tamano de lienzo
@@ -876,7 +930,7 @@ void draw() {
   cu313.update();
   cuerr2.update();
 
-  //Llama a los objetos clase cuadrado
+  //Llama a los objetos clase circulo
   //Linea Y 0
   cir1.update();
   cir2.update();
@@ -1036,7 +1090,61 @@ void draw() {
   cir151.update();
   cir152.update();
 
+  //Llama a los objetos clase triangulo
+  //Linea Y 0
   tri1.update();
+  tri2.update();
+  tri3.update();
+  tri4.update();
+  tri5.update();
+  tri6.update();
+  //Linea X 0
+  tri7.update();
+  tri8.update();
+  tri9.update();
+  tri10.update();
+  tri11.update();
+  tri12.update();
+  tri13.update();
+  //Cuadrante 1
+  tri14.update();
+  tri15.update();
+  tri16.update();
+  tri17.update();
+  tri18.update();
+  tri19.update();
+  tri20.update();
+  tri21.update();
+  tri22.update();
+  tri23.update();
+  tri24.update();
+  tri25.update();
+  tri26.update();
+  tri27.update();
+  tri28.update();
+  tri29.update();
+  tri30.update();
+  tri31.update();
+  tri32.update();
+  tri33.update();
+  tri34.update();
+  tri35.update();
+  tri36.update();
+  tri37.update();
+  tri38.update();
+  tri39.update();
+  tri40.update();
+  tri41.update();
+  tri42.update();
+  tri43.update();
+  tri44.update();
+  tri45.update();
+  tri46.update();
+  tri47.update();
+  tri48.update();
+  tri49.update();
+  tri50.update();
+
 
   //forma principal
   noStroke();
