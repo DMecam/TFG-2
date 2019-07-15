@@ -1,3 +1,6 @@
+import processing.serial.*;  
+Serial arduino;  
+int serialIn;
 //define las variables
 //variables de posicion
 float posX;
@@ -39,6 +42,8 @@ Circulo cir1 = new Circulo(160, 110);
 Triangulo tri1 = new Triangulo(200, 100);
 
 void setup() {
+  printArray(Serial.list());
+  arduino = new Serial(this, Serial.list()[0], 9600);
   //define el tamano de lienzo
   size(800, 800);
   //define el modo del rectangulo
@@ -287,42 +292,42 @@ void draw() {
   }
 
   /////////// Fin de las colisiones ///////////
-  
+
   //altera los valores de la funcion caminar de las formas segun el contador de 
   //movimiento
-  if (contCaminar > 4) {
+  if (contCaminar < 200) {
     cir1.caminar();
     cu1.caminar();
     tri1.caminar();
   }
-  
-  if (contCaminar > 9) {
+
+  if (contCaminar < 150) {
     cir1.opcion1 = random(5);
     cu1.opcion4 = random(5);
     tri1.opcion3 = random(5);
   }
-  
-  if (contCaminar > 14) {
+
+  if (contCaminar < 100) {
     cir1.opcion2 = random(5);
     cu1.opcion1 = random(5);
     tri1.opcion4 = random(5);
   }
-  
-  if (contCaminar > 19) {
+
+  if (contCaminar < 50) {
     cir1.opcion3 = random(5);
     cu1.opcion2 = random(5);
     tri1.opcion1 = random(5);
   }
-  
-  if (contCaminar > 24) {
+
+  if (contCaminar < 10) {
     cir1.opcion4 = random(5);
     cu1.opcion3 = random(5);
     tri1.opcion2 = random(5);
   }
-  
+
   //resetea la posicion y forma inicial de la forma en caso de que el contador de 
   //movimiento baje su valor
-  if (contCaminar == 1) {
+  if (contCaminar == 4000) {
     resetCir1 = true;
     cir1.xPos = 160;
     cir1.yPos = 110;
@@ -348,9 +353,16 @@ void draw() {
   m = millis();
   fill(0);
   text("Tiempo " + m, 200, 220);
-  
+
   //muestra el valor del contador de movimiento
   text("Contador de movimiento " + contCaminar, 200, 240);
+  
+  if (arduino.available()>0)
+  {
+    serialIn=arduino.read();
+    println(serialIn);
+  }
+  contCaminar=serialIn;
 }
 
 //Movimiento de la forma principal
@@ -394,15 +406,15 @@ void keyPressed() {
     circulo = false;
     triangulo = false;
   }
-  
+
   //control del contador de movimiento
   //lo aumenta
   //equivale al valor introducido por un sensor
   if (key == 'q' || key == 'Q') {
     contCaminar++;
   }
-  
-  
+
+
   //control del contador de movimiento
   //lo aumenta
   //equivale al valor introducido por un sensor
