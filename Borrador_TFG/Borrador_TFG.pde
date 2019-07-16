@@ -1,6 +1,6 @@
 import processing.serial.*;  
 Serial arduino;  
-int serialIn;
+String serialIn;
 //define las variables
 //variables de posicion
 float posX;
@@ -356,13 +356,24 @@ void draw() {
 
   //muestra el valor del contador de movimiento
   text("Contador de movimiento " + contCaminar, 200, 240);
-  
+
   if (arduino.available()>0)
   {
-    serialIn=arduino.read();
+    //serialIn=arduino.read();
+    serialIn = arduino.readStringUntil(10);
     println(serialIn);
   }
-  contCaminar=serialIn;
+
+  if (serialIn == null)
+    contCaminar = 0;
+  else
+    contCaminar=float(serialIn);
+
+  //if (serialIn.length() > 0) {
+  //  contCaminar=float(serialIn);
+  //} else {
+  //  contCaminar = 0;
+  //}
 }
 
 //Movimiento de la forma principal
